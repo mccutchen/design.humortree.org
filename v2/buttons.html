@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title> </title>
+	
+	<script language="javascript">
+		function swap(which,state)
+		{
+			document.images[which].src = "img/" + which + "_" + state + ".gif";
+		}
+		
+		function clicked(which)
+		{
+			
+		}
+		
+		function preload()
+		{
+			var imgs = new Array();
+			imgs[0] = new Image();
+			imgs[0].src = "img/information_on.gif";
+			imgs[1] = new Image();
+			imgs[1].src = "img/information_off.gif";
+			
+			imgs[2] = new Image();
+			imgs[2].src = "img/projects_on.gif";
+			imgs[3] = new Image();
+			imgs[3].src = "img/projects_off.gif";
+			
+			imgs[4] = new Image();
+			imgs[4].src = "img/contact_on.gif";
+			imgs[5] = new Image();
+			imgs[5].src = "img/contact_off.gif";
+		}
+	</script>
+	
+	<style type="text/css">
+	</style>
+	
+</head>
+
+<body bgcolor="#555555" background="bg/stripe.gif" onload="preload();" link="#666666" alink="white" vlink="#666666" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0">
+<p align="right">
+	<a href="javascript:clicked('information');" onmouseover="swap('information','on');" onmouseout="swap('information','off');"><img src="img/information_still.gif" name="information" border="0"></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="javascript:clicked('information');" onmouseover="swap('projects','on');" onmouseout="swap('projects','off');"><img src="img/projects_still.gif" name="projects" border="0"></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="javascript:clicked('information');" onmouseover="swap('contact','on');" onmouseout="swap('contact','off');"><img src="img/contact_still.gif" name="contact" border="0"></a>
+
+
+</body>
+</html>

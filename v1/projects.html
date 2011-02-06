@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+	<script language="javascript">
+		var colors = new Array("00","33","66","99","cc","ff");
+		
+		function makecolor()
+		{
+			var colorString = "#";
+			
+			var trr = colors[Math.floor(Math.random() * colors.length)];
+			var tgg = colors[Math.floor(Math.random() * colors.length)];
+			var tbb = colors[Math.floor(Math.random() * colors.length)];
+			
+			colorString = colorString + trr + tgg + tbb;				
+			return colorString;
+		}
+		
+		function setbg()
+		{
+			document.bgColor = makecolor();
+		}
+		
+		
+	</script>
+</head>
+
+<body onload="setbg();" link="white" alink="black" vlink="white">
+<table border="0" cellpadding="0" cellspacing="0" align="left">
+<tr>
+	<td align="left" width="465" height="150" valign="top">
+		<a href="javascript:setbg();"><img src="images/bottomthree.gif" border="0" width="465" height="150" title="(click here to change background color)" alt="click here"></a>
+	</td>
+	<td align="left">
+		
+		<table border="0" cellpadding="20" cellspacing="0" align="left" width="465">
+		<tr>
+		<td align="left" height="150" width="465">
+		<font face="arial" size="-1" color="white">
+			<a href="http://www.humortree.org" target="_new">www.humortree.org</a>&nbsp;&nbsp;&nbsp;&nbsp;// link
+			<br><br>
+			HUMORTREE.org is the HUMOR TREE DESIGN COALITION's experimentation and learning site.  HUMORTREE.org
+			is the COALITION's passion, as well as its tool for furthering its knowledge.  Go there with an open
+			mind and a new browser.  Preferably Internet Explorer 5.  All other browsers are worthless.
+		</font>
+		</td>
+		</tr>
+		</table>
+	</td>
+	<td align="left">
+		<table border="0" cellpadding="10" cellspacing="0" align="left" width="465">
+		<tr>
+		<td align="left" height="150" width="465">
+		<font face="arial" size="-1" color="white">
+			<a href="http://www.oakreflections.com" target="_new">www.oakreflections.com</a>&nbsp;&nbsp;&nbsp;&nbsp;// link
+			<br><br>
+			Oak Reflections is a furniture store in Longview, TX.  Their site is done in pastels
+			and grays, muted colors, to soothe the viewer and manipulate them into associating kindness
+			and sweetness with this particular furniture company.  The HUMOR TREE DESIGN COALITION not inrequently
+			uses psychology to achieve its goals.  It is immeasurably effective.  See for yourself.
+		</font>
+		</td>
+		</tr>
+		</table>
+		
+	</td>
+</tr>
+</table>
+
+</body>
+</html>

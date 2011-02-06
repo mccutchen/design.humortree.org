@@ -1,0 +1,630 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title> </title>
+	
+	<script language="javascript">
+		// these variable will contain objects later on, so that the objects can be passed
+		// through setTimeout() -- this is the only way i could figure out how to do it
+		var oursteps = new Array(0,0,0,0);
+		var ourobjs = new Array(null,null,null,null);
+		var ourwheretos = new Array(0,0,0,0);
+		var ourgoals = new Array(0,0,0,0);
+		
+		var distances = new Array(400,435,470,505); // the final resting places of the three that aren't chosen
+		var ceiling = 60; // the highest the buttons get to go, just below little stripe picture
+		var theothers; // will be filled with the indexes of the three buttons not chosen in handler()
+		var step = 10; // step
+		var delay = step; // delay
+		var buttons = new Array(); // will hold the _button objects created with new _button()
+		var isIE,isNS4, isNS6; // for browser detection
+		var choices = new Array("who_we_are","what_we_do","what_weve_done","what_we_like","where_to_reach_us");
+		var chosen;
+		var lastinfochosen = false;
+		
+		// these variables keep the user from breaking the script by clicking while the things are moving
+		// around.
+		var inprogress = false;
+		var finishedcounter = 0;
+		var lastcontent = null;
+			
+		// handle clicks
+		function handler(which) // which is the index of the div that was picked
+		{
+			var picked = which;
+						
+			chosen = choices[which];
+						
+			if(isIE)
+				document.all.tags("a")[which].blur();
+			
+			// set theothers to contain the indexes of the three divs that were not picked
+			if(which == 0) theothers = orderme(1,2,3,4);
+			else if(which == 1) theothers = orderme(2,3,4,0);
+			else if(which == 2) theothers = orderme(3,4,0,1);
+			else if(which == 3) theothers = orderme(4,0,1,2);
+			else theothers = orderme(0,1,2,3);
+			
+			if(!inprogress) // if it's not already doing something
+			{
+				inprogress = true;
+				
+				move_up(buttons[picked],randnum(25) + 10); // move the one clicked on to the top
+				
+				var temp = buttons[picked].index;
+			
+				for(var i = 0; i < theothers.length; i++) // move the rest to the bottom
+					move_down(buttons[theothers[i]], randnum(40) + 10, distances[i]);
+			}
+			return;
+		}
+						
+		function init()
+		{
+			// browser detection
+			if(document.all) isIE = true;
+			else if(document.layers)
+			{
+				isNS4 = true;
+			}
+			else if(document.getElementById) isNS6 = true;
+			
+			// initialize the buttons[] array with four new _button()s
+			for(var i = 0; i < choices.length; i++)
+			{
+				buttons[i] = new _button(i);
+				buttons[i].index = i;
+			}
+		}
+		
+		// the _button function creates an object whose top can be read and
+		// written to.  in this page, the new _buttons are stored in the buttons[]
+		// array, and their properties are accessed like so:
+		//     buttons[i].style.top = x;
+		// the buttons[i].index is used to keep track of the individual objects in the
+		// ourobjs[] etc. arrays, for use with setTimeout()
+		function _button(which)
+		{
+			if(isIE)
+				this.style = document.all.tags("div")[which].style;
+			else if(isNS4)
+				this.style = document.layers[which];
+			else if(isNS6)
+				this.style = document.getElementsByTagName("div")[which].style;
+				
+			this.index;
+		}
+		
+		function move_up(obj,step)
+		{
+			ourobjs[obj.index] = obj; // store the obj and the step in a global array so that they can go through setTimeout()
+			oursteps[obj.index] = step;
+			hidecontent(); // hide any content up when things start-a-movin
+			
+			if(parseInt(obj.style.top) > ceiling) // move the object up by step pixels
+				obj.style.top = parseInt(obj.style.top) - step; 
+			
+			else if(parseInt(obj.style.top) == ceiling) // or stop when done
+			{
+				finished();
+				return;
+			}
+			else //parseInt(obj.style.top) --- the object ceiling, needs to be shifted down
+			{
+				adjust(obj,1,ceiling);
+				return;
+			}
+			// this is the weird way to call setTimeout with the arrays and objects i made- don't know why
+			var mytimer = setTimeout("move_up(ourobjs[" + obj.index + "], oursteps[" + obj.index + "]);",delay);
+		}
+		
+		function move_down(obj,step,goal) // works the same as move_up() but with the addition of a goal
+		{
+			ourobjs[obj.index] = obj;
+			oursteps[obj.index] = step;
+			ourgoals[obj.index] = goal;
+			
+			if(parseInt(obj.style.top) < goal)
+			{
+				obj.style.top = parseInt(obj.style.top) + step;
+			}
+				
+			else if(parseInt(obj.style.top) == goal)
+			{
+				finished();
+				return;
+			}
+			
+			else if (parseInt(obj.style.top) > goal)
+			{
+				adjust(obj,1,goal);
+				return;
+			}
+			
+			var mytimer = setTimeout("move_down(ourobjs[" + obj.index + "], oursteps[" + obj.index + "], ourgoals[" + obj.index + "]);",delay);
+		}
+		
+		// the adjust() function is called when an object overshoots its goal, and needs to
+		// ease back into place -- it makes for a nice effect
+		function adjust(obj,step,whereto)
+		{
+			ourobjs[obj.index] = obj;
+			oursteps[obj.index] = step;
+			ourwheretos[obj.index] = whereto;
+			
+			// if the object is too high, lower it, and vice versa
+			if(parseInt(obj.style.top) < whereto - 1)
+				obj.style.top = parseInt(obj.style.top) + step;
+			else if(parseInt(obj.style.top) > whereto)
+				obj.style.top = parseInt(obj.style.top) - step;
+			else
+			{
+				finished();
+				return;
+			}
+			setTimeout("adjust(ourobjs[" + obj.index + "],oursteps[" + obj.index+ "],ourwheretos[" + obj.index + "]);",10);
+		}
+		
+		// this function will eventually be responsible for showing the
+		// content whenever user clicks button
+		function showcontent(which)
+		{
+			if(isIE)
+				document.all[which].style.visibility = "visible";
+			else if(isNS4)
+				document.layers[which].visibility = "visible";
+			else if(isNS6)
+				document.getElementById(which).style.visibility = "visible";
+			lastcontent = which;
+		}
+		// hide the content!
+		// hide it damned good!  this is what the lastcontent variable was for
+		function hidecontent()
+		{
+			if(lastcontent)
+			{
+				if(isIE)
+					document.all[lastcontent].style.visibility = "hidden";
+				else if(isNS4)
+					document.layers[lastcontent].visibility = "hidden";
+				else if(isNS6)
+					document.getElementById(lastcontent).style.visibility = "hidden";
+			}
+			
+			if(lastinfochosen)
+			{
+				if(isIE)
+					document.all[lastinfochosen].style.visibility = "hidden";
+				else if(isNS4)
+					document.layers[lastinfochosen].visibility = "hidden";
+				else if(isNS6)
+					document.getElementById(lastinfochosen).style.visibility = "hidden";
+			}
+			
+		}
+		
+		function showinfo(which)
+		{
+			if(lastinfochosen)
+			{
+				if(isIE)
+					document.all[lastinfochosen].style.visibility = "hidden";
+				else if(isNS4)
+					document.layers[lastinfochosen].visibility = "hidden";
+				else if(isNS6)
+					document.getElementById(lastinfochosen).style.visibility = "hidden";
+			}
+			
+			if(isIE)
+				document.all[which].style.visibility = "visible";
+			else if(isNS4)
+				document.layers[which].visibility = "visible";
+			else if(isNS6)
+				document.getElementById(which).style.visibility = "visible";
+			
+			lastinfochosen = which;
+		}
+		
+		
+		//////////////////////////////////////////////////////////////
+		////// some random-type functions
+		//////////////////////////////////////////
+		function random_image()
+		{
+			var theimage = "<img src=\"img/banner_" + randnum(8) + ".gif\" name=\"stripe\" width=400 height=15>";
+			return theimage;
+		}
+		
+		function randnum(limit) // returns random number between 0 and limit
+		{
+			return Math.floor(Math.random() * limit);
+		}
+		function swapimage() // swaps the little stripe on mouseovers... really tricky on netscape, because it can suck my dick
+		{
+			if(isNS4)
+				document.layers['logodiv'].document.images['stripe'].src = "img/banner_" + randnum(8) + ".gif";
+			
+			else
+				document.images['stripe'].src = "img/banner_" + randnum(8) + ".gif";
+		}
+				
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		function finished() // this function is called every time a button stops moving, so when all four have called it,
+		{										// the animation is all finished and the content can be loaded
+			if(finishedcounter < choices.length - 1)
+				finishedcounter++;
+			else
+			{
+				var done = false;
+				
+				inprogress = false;
+				finishedcounter = 0;
+				showcontent(chosen);
+			}
+		}
+				
+		////////////////////////////////////////////////////
+		/////////// for the swapus function:
+		///////////////////////////////////////////////////
+		var tracker = new Array("off","off","off","off"); // on initialization, none of the images have been used
+		var source = new Array("will","jacob","josh","mike");
+		var dir = "img/us/";
+		var onext = "_on.gif";
+		var offext = "_off.gif";
+		function swap_us(which)
+		{
+			var me = source[which];
+			if(!isNS4)
+			{
+				if(tracker[which] == "off") // if image is in "off" state, turn it on
+				{
+					document.images[me].src = dir + me + onext;
+					tracker[which] = "on";
+				}
+				else
+				{
+					document.images[me].src = dir + me + offext;
+					tracker[which] = "off";
+				}			
+			}
+			else
+			{
+				if(tracker[which] == "off") // if image is in "off" state, turn it on
+				{
+					document.layers['who_we_are'].document.images[me].src = dir + me + onext;
+					tracker[which] = "on";
+				}
+				else
+				{
+					document.layers['who_we_are'].document.images[me].src = dir + me + offext;
+					tracker[which] = "off";
+				}
+			}
+		}
+			
+		/////////////////////////////////////////////
+		/////// sort something randomly
+		///////////////////////////////////////////
+		function orderme()
+		{
+			var args = new Array();
+			for(var i = 0; i < orderme.arguments.length; i++)
+				args[i] = orderme.arguments[i];
+			args.sort(randomforsort);
+			return args;
+		}
+		function randomforsort()
+		{
+			var arr = new Array(-1,0,1,0,-1,1);
+			return arr[randnum(arr.length)];
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="style.css.php">
+	<style type="text/css">
+		.button
+		{
+			z-index:2;
+		}
+	</style>
+	
+</head>
+
+<body bgcolor="#cccccc" onload="init();" link="#666666" alink="black" vlink="#444444">
+
+<div style="position:absolute; top:60px; left:0px; width:400px; height:36px;" class="button">
+	<a href="javascript:handler(0);" onmouseover="swapimage();"><img src="img/who_we_are.gif" height="36" width="400" border="0"></a>
+</div>
+<div style="position:absolute; top:95px; left:0px; width:400px; height:36px;" class="button">
+	<a href="javascript:handler(1);" onmouseover="swapimage();"><img src="img/what_we_do.gif" height="36" width="400" border="0"></a>
+</div>
+<div style="position:absolute; top:130px; left:0px; width:400px; height:36px;" class="button">
+	<a href="javascript:handler(2);" onmouseover="swapimage();"><img src="img/what_weve_done.gif" height="36" width="400" border="0"></a>
+</div>
+<div style="position:absolute; top:165px; left:0px; width:400px; height:36px;" class="button">
+	<a href="javascript:handler(3);" onmouseover="swapimage();"><img src="img/what_we_like.gif" height="36" width="400" border="0"></a>
+</div>
+<div style="position:absolute; top:200px; left:0px; width:400px; height:36px;" class="button">
+	<a href="javascript:handler(4);" onmouseover="swapimage();"><img src="img/where_to_reach_us.gif" height="36" width="400" border="0"></a>
+</div>
+
+<div id="who_we_are" style="position:absolute; top:100px; left:0px; width:400px; height:300px; visibility:hidden;">
+	<table border="0" cellpadding="00" cellspacing="10" width="400" align="center">
+		<tr>
+			<td class="text" rowspan="4" width="200">
+			&nbsp;&nbsp;&nbsp;&nbsp;The Humor Tree Design Coalition is a collection of like-minded young men looking to make
+			the world a nicer-looking place.  We have a passion for simplicity, elegance, thoughtfulness, and for just plain good
+			design.
+			<br><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;We are artists.  We are musicians.  We are satellite systems designers.  We are athletes.  The
+			members of the coalition come from unique backgrounds.  As a result, we all have very different influences, inspirations,
+			and idols.  We are four individuals.
+			<br><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;We are going to change the world. 
+			</td>
+			<td align="center">
+				<a href="#" onmouseover="swap_us(0);" onmouseout="swap_us(0);"><img src="img/us/will_off.gif" name="will" height="50" width="50" border="0"></a>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<a href="#" onmouseover="swap_us(1);" onmouseout="swap_us(1);"><img src="img/us/jacob_off.gif" name="jacob" height="50" width="50" border="0"></a>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<a href="#" onmouseover="swap_us(2);" onmouseout="swap_us(2);"><img src="img/us/josh_off.gif" name="josh" height="50" width="50" border="0"></a>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<a href="#" onmouseover="swap_us(3);" onmouseout="swap_us(3);"><img src="img/us/mike_off.gif" name="mike" height="50" width="50" border="0"></a>
+			</td>
+		</tr>
+	</table>		
+</div>
+
+<div id="what_we_do" style="position:absolute; top:100px; left:0px; width:400px; height:300px; visibility:hidden;">
+	<table border="0" cellpadding="00" cellspacing="10" width="400" align="center">
+		<tr>
+			<td class="text" width="250">
+			&nbsp;&nbsp;&nbsp;&nbsp;The Humor Tree Design Coalition designs for just about every medium.  We do web design,
+			print design, identity design, information architechture, user interface design, topiary design,
+			industrial design, sound design, and clothing design.  And that's just scraping the surface.
+			<br><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;We will work with you from start to finish, keeping you updated
+			and satisfied about the state of your project.
+			<br><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;You can turn us loose, and let our creativity run wild,
+			or you can tell us exactly what you want and let us forge it for you.
+			</td>
+			<td class="text" width="150" align="center">
+			 <b>Our Skillset</b>
+			 <br>
+			 ----------------
+			 <br>
+			 HTML
+			 <br>
+			 Dynamic HTML
+			 <br>
+			 JavaScript
+			 <br>
+			 Perl Script (CGI)
+			 <br>
+			 PHP Script
+			 <br>
+			 Flash Animation
+			 <br>
+			 Photography
+			 <br>
+			 Illustration
+			 <br>
+			 XML 
+			</td>
+		</tr>
+	</table>		
+</div>
+
+<div id="what_weve_done" style="position:absolute; top:100px; left:0px; width:400px; height:300px; visibility:hidden;">
+	<table border="0" cellpadding="00" cellspacing="10" width="400" align="center">
+		<tr>
+			<td class="text" width="200" align="left" valign="top">
+				<b>Web Projects</b>
+				<br>
+				--------------
+				<br>
+				<a href="javascript:showinfo('info_humortree');">Humor Tree</a>
+				<br>
+				<a href="javascript:showinfo('info_joshandmaggie');">JoshAndMaggie.com</a>
+				<br>
+				<a href="javascript:showinfo('info_horcob');">Horcob.org</a>
+				<br>
+				<a href="javascript:showinfo('info_oakreflections');">Oak Reflections</a>
+				<br>
+				<a href="javascript:showinfo('info_gluw');">Greater Longview United Way</a>
+				<br>
+				<br>
+				<b>Analog Art Projects</b>
+				<br>
+				--------------
+				<br>
+				<i>coming soon.</i>
+			</td>
+		</tr>
+	</table>		
+</div>
+
+<div id="what_we_like" style="position:absolute; top:100px; left:0px; width:400px; height:300px; visibility:hidden;">
+	<table border="0" cellpadding="00" cellspacing="10" width="400" align="center">
+		<tr>
+			<td class="text" width="200" align="left" valign="top">
+				<b>Web Sites</b>
+				<br>
+				--------------
+				<br>
+				<a href="http://www.k10k.net" target="_new">Kaliber 10000</a>
+				<br>
+				<a href="http://www.superbad.com" target="_new">Superbad</a>
+				<br>
+				<a href="http://www.thesquarerootof-1.com" target="_new">The Square Root of -1</a>
+				<br>
+				<a href="http://www.once-upon-a-forest.com" target="_new">Once Upon a Forest</a>
+				<br>
+				<br>
+				<b>Typefaces</b>
+				<br>
+				--------------
+				<br>
+				<a href="http://www.adobe.com/type/browser/F/P_176/F_DINS-10005000.html" target="_new">DIN Schrift Mittelschrift</a>
+				<br>
+				<a href="http://www.adobe.com/type/browser/P/P_037.html" target="_new">Univers</a>
+				<br>
+				<a href="http://www.kottke.org/plus/type/silkscreen/index.html" target="_new">Silkscreen</a>
+				<br>
+				<br>
+				<b>Software</b>
+				<br>
+				--------------
+				<br>
+				<a href="http://www.adobe.com/products/photoshop/" target="_new">Adobe&copy; Photoshop</a>
+				<br>
+				<a href="http://www.adobe.com/products/illustrator/" target="_new">Adobe&copy; Illustrator</a>
+				<br>
+				<a href="http://www.adobe.com/products/indesign/" target="_new">Adobe&copy; InDesign</a>
+				<br>
+				<a href="http://www.allaire.com/products/homesite/index.cfm" target="_new">Allaire&copy; Homesite</a>
+			</td>
+			<td class="text" width="200" align="left" valign="top">
+				<b>Authors</b>
+				<br>
+				--------------
+				<br>
+				<a href="http://www.amazon.com/exec/obidos/ASIN/0316769509/qid=976155114/sr=1-19/107-0570530-8794101" target="_new">J. D. Salinger</a>
+				<br>
+				<a href="http://www.amazon.com/exec/obidos/ASIN/0385333471/qid=976155241/sr=1-21/107-0570530-8794101" target="_new">Kurt Vonnegut</a>
+				<br>
+				<a href="http://www.amazon.com/exec/obidos/ASIN/0805210407/o/qid=976155313/sr=2-2/107-0570530-8794101" target="_new">Franz Kafka</a>
+				<br>
+				<br>
+				<b>Artists</b>
+				<br>
+				--------------
+				<br>
+				<a href="http://www.mcescher.com/" target="_new">M. C. Escher</a>
+				<br>
+				<a href="http://www.artchive.com/artchive/B/basquiat.html" target="_new">Jean-Michel Basquiat</a>
+				<br>
+				<a href="http://www.magritte.com/" target="_new">Rene Magritte</a>
+				<br>
+				<br>
+				<b>Music</b>
+				<br>
+				--------------
+				<br>
+				<a href="http://www.stadler.org/KruderDorfmeister/" target="_new">Kruder+Dorfmeister</a>
+				<br>
+				<a href="http://www.velvetunderground.com/" target="_new">The Velvet Underground</a>
+				<br>
+				<a href="http://www.cro-magnon.com/low/" target="_new">Low</a>
+				<br>
+				<a href="http://www.loopz.co.uk/" target="_new">Orbital</a>
+				<br>
+				<a href="http://www.cdnow.com/cgi-bin/mserver/SID=1383137572/pagename=/RP/CDN/FIND/discography.html/ArtistID=MONK*THELONIOUS" target="_new">Thelonious Monk</a>
+		</tr>
+	</table>
+</div>
+
+<div id="where_to_reach_us" style="position:absolute; top:100px; left:0px; width:400px; height:300px; visibility:hidden;">
+	<table border="0" cellpadding="00" cellspacing="10" width="400" align="center">
+		<tr>
+			<td>&nbsp;</td>
+			<td class="text" width="200" align="left" valign="top">
+				<b>email</b>
+				<br>
+				--------------
+				<br>
+				<a href="mailto:coalition@humortree.org">coalition@humortree.org</a>
+				<br>
+				<br>
+				<b>gmail</b>
+				<br>
+				--------------
+				<br>
+				2021 Guadalupe
+				<br>
+				Apt. 1506
+				<br>
+				Austin, TX - 78705
+				<br>
+				<br>
+				<b>tel.</b>
+				<br>
+				--------------
+				<br>
+				(512) 505 1506
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+	</table>		
+</div>
+
+<div id="info_humortree" style="position:absolute; top:120px; left:200px; width:180px; height:300px; visibility:hidden;" class="text">
+	&nbsp;&nbsp;&nbsp;&nbsp;Humor Tree is our playground.  It is where
+	we learn our new tricks.  It is an ongoing project, and probably won't
+	end until we know all that there is to know about the internet.  Be warned:
+	the site is "cutting edge" and "experimental," so you'll need a 4.0+ browser
+	to look at it.
+	<br>
+	<br>
+	<a href="http://www.humortree.org" target="_new">Visit Humor Tree</a>
+</div>
+<div id="info_oakreflections" style="position:absolute; top:120px; left:200px; width:180px; height:300px; visibility:hidden;" class="text">
+	&nbsp;&nbsp;&nbsp;&nbsp;Oak Reflections is a hand-made furniture company based
+	in Longview, Texas.  We were hired to completely re-make their site.  The previous
+	version was a mangled mess produced with Microsoft Word.  It was terrible.
+	<br>
+	<br>
+	<a href="http://www.oakreflections.com" target="_new">Visit Oak Reflections</a>
+</div>
+<div id="info_joshandmaggie" style="position:absolute; top:120px; left:200px; width:180px; height:300px; visibility:hidden;" class="text">
+	&nbsp;&nbsp;&nbsp;&nbsp;JoshAndMaggie.com the official site of the marriage
+	of Josh Mings (of the Humor Tree Design Coalition) and Maggie Krahmer, of El
+	Paso, Texas.  It also requires a 4.0+ browser.
+	<br>
+	<br>
+	<a href="http://www.joshandmaggie.com" target="_new">Visit JoshAndMaggie.com</a>
+</div>
+<div id="info_horcob" style="position:absolute; top:120px; left:200px; width:180px; height:300px; visibility:hidden;" class="text">
+	&nbsp;&nbsp;&nbsp;&nbsp;Horcob.org is Jacob Bailey's personal space.  It is where
+	he can record his thoughts, demonstrate his talents, show his portfolio.  Horcob.org
+	is an entertaining read, and updated often.
+	<br>
+	<br>
+	<a href="http://www.horcob.org" target="_new">Visit Horcob.org</a>
+</div>
+<div id="info_gluw" style="position:absolute; top:120px; left:200px; width:180px; height:300px; visibility:hidden;" class="text">
+	&nbsp;&nbsp;&nbsp;&nbsp;The Greater Longview United Way's was created with one thing in mind:
+	outreach.  We made the site very simple, to make sure that anyone with an internet connection
+	could look at it, and benefit from it.
+	<br>
+	<br>
+	<a href="http://www.gluw.org" target="_new">Visit The Greater Longview United Way</a>
+</div>
+
+<div style="position:absolute; top:600px; left:0px;">
+<img src="img/blank.gif">
+</div>
+
+<div id="logodiv" style="position:absolute; top:0px; left:0px; width:400px; height:36px;">
+	<table border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+			<td><img src="img/logo.gif" height="46" width="400"></td>
+		</tr>
+		<tr>
+			<td><script language="javascript">document.write(random_image());</script></td>
+		</tr>
+	</table>
+</div>
+
+</body>
+</html>

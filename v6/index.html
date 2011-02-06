@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>The Humor Tree Design Coalition - version 6 beta 2</title>
+	
+	<meta http-equiv= "pragma" content="no-cache" />
+	<meta name="ROBOTS" content="ALL" />
+	<meta name="DESCRIPTION" content="humortree.com - The Humor Tree Design Coalition, as new-fashioned design and programming firm." />
+	<meta name="KEYWORDS" content="humortree humor tree design coalition web design programming php perl javascript html xhtml css" />
+	<meta name="AUTHOR" content="will mccutchen - will@humortree.org" />
+	
+	<script type="text/javascript" src="HTLIB.js">/* cross browser DHTML library copyright © 1981-2001 Will McCutchen */</script>
+	<script type="text/javascript" src="slider.js">/* page-specific javascript */</script>	
+	
+	<link rel="stylesheet" type="text/css" href="htdc.css" />
+	
+</head>
+
+<body onload="init();">
+
+<!-- main div -->
+<div id="main" style="position:absolute; top:0px; left: 300px; width:300px; height:100%;" onmousedown="void(focusSlider('main'));">
+	<div id="main_white" class="white" style="position:absolute; top:0px; left: 0px; height:100%;">
+		<div class="logo"><img name="main_image" src="img/main.gif" alt="the HTDC" /></div>
+		<div class="text">
+			The Humor Tree Design Coalition (HTDC) is a group
+			of young and talented web developers.  We have been
+			doing this stuff since we were in our training pants.
+			We will continue to do this stuff until we are old
+			and gray and back in our training pants.
+			<br />
+			<br />
+			Please take the time to explore this web site and find
+			out what it is that we do.
+			<br />
+			<br />
+			
+			<div class="choice"><a href="javascript:void(focusSlider('about'));" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="about_plus" style="color:red;">+ </span>About Us</a></div>
+			<div class="choice"><a href="javascript:void(focusSlider('ourskills'));" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="ourskills_plus" style="color:red;">+ </span>Our Skills</a></div>
+			<div class="choice"><a href="javascript:void(focusSlider('clientlist'));" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span style="color:red;">+ </span>Client List</a></div>
+			<div class="choice"><a href="javascript:void(focusSlider('contact'));" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span style="color:red;">+ </span>Contact</a></div>
+			<br />
+			<div class="choice"><a href="javascript:void(focusSlider('colophon'));" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span style="color:red;">+ </span>Colophon &amp; Archives</a></div>
+		</div>
+	</div>
+	<div class="shadow" style="position:absolute; top:0px; left: 290px; height:100%;"></div>
+</div>
+<!-- main div -->
+
+
+
+<!-- about div -->
+<div id="about" style="position:absolute; top:0px; left: 100px; width:300px; height:100%; visibility:hidden;" onmousedown="void(focusSlider('about'));">
+	<div id="about_white" class="white" style="position:absolute; top:0px; left: 0px;">
+		<div class="head"><img name="about_image" src="img/about.gif" alt="About Us" /></div>
+		<div class="text">
+			There are three of us here in the HTDC.  We are all
+			unique people, with our own unique ideas and skills.
+			<br />
+			<br />
+			One thing we have in common is our desire to make
+			the world a nicer looking place, one web site at
+			a time.
+			<br />
+			<br />
+			You can become better acquainted with us by clicking
+			on our names below.
+			<br />
+			<br />
+			
+			<div class="choice" id="will_head"><a href="javascript:showBio('will');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="will_plus" style="color:red;">+ </span>Will McCutchen</a></div>
+					<div class="bio" id="will" style="display:none;">
+						is the main programmer for the HTDC.  He is
+						equally comfortable making pages active with DHTML
+						as he is making them dynamic with PHP and MySQL.
+						<br />
+						<br />
+						He enjoys slow music and invigorating jogs.  On
+						rainy days, you're likely to catch him napping
+						with a book on his chest and a fire in his
+						fireplace.
+					</div>
+			<div class="choice" id="jacob_head"><a href="javascript:showBio('jacob');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="jacob_plus" style="color:red;">+ </span>Jacob Bailey</a></div>
+					<div class="bio" id="jacob" style="display:none;">
+						is the artist-in-residence at the HTDC.  He is
+						our guiding light when it comes to all things
+						aesthetic.
+						<br />
+						<br />
+						He is known to dabble in both yoga and tai-chi,
+						and wears his pants in a fashion best described
+						as "devil-may-care."
+					</div>
+			<div class="choice" id="josh_head"><a href="javascript:showBio('josh');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="josh_plus" style="color:red;">+ </span>Josh Mings</a></div>
+					<div class="bio" id="josh" style="display:none;">
+						is an engineer at heart.  He is the man who does
+						most of our Information Architecture and makes
+						sure each site we create is Usability Tested.
+						<br />
+						<br />
+						Josh has a knack for attracting dangerous women.
+						He has been stabbed three times and shot once,
+						all by women who loved him.  But, he's married
+						now, for better or for worse.
+					</div>
+			<br />
+			<br />
+			<br />
+			<br />
+			<div class="choice"><a href="javascript:closeSlider('about');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="text-align:right; width:100%;"><span style="color:red;">X </span>Close</a></div>
+		</div>
+	</div>
+	<div class="shadow" style="position:absolute; top:0px; left: 290px;"></div>
+</div>
+<!-- about div -->
+
+
+
+
+<!-- skills div -->
+<div id="ourskills" style="position:absolute; top:0px; left: 200px; width:300px; height:100%; visibility:hidden;" onmousedown="void(focusSlider('ourskills'));">
+	<div id="ourskills_white" class="white" style="position:absolute; top:0px; left: 0px;">
+		<div class="head"><img name="ourskills_image" src="img/ourskills.gif" alt="Our Skills" /></div>
+		<div class="text">
+			Client Side
+			<br />
+			<div class="choice" id="html_head"><a href="javascript:showBio('html');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="html_plus" style="color:red;">+ </span>HTML 3.2 - 4.1 Transitional</a></div>
+					<div class="bio" id="html" style="display:none;">
+						HTML, or Hyper Text Markup Language, is the most basic language of the web.
+						It is a set of tags that allow a developer to organize information in the
+						form of a web site.
+						<br /><br />
+						HTML 4.01 is the newest HTML specification, and is (almost) fully implemented
+						in all of the version 4.0 and greater browsers.  HTML 3.2 is an outdated
+						specification that is supported by the version 3.0 browsers.
+					</div>
+					
+			<div class="choice" id="xhtml_head"><a href="javascript:showBio('xhtml');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="xhtml_plus" style="color:red;">+ </span>XHTML 1.0</a></div>
+					<div class="bio" id="xhtml" style="display:none;">
+						XHTML is a reformulation of HTML 4 in XML.  It is the new specification
+						that is intended to replace HTML.  XHTML combines the ease of HTML with
+						the power and flexibility of XML.
+						<br /><br />
+						XHTML will eventually allow developers to write one page that can be
+						displayed accross all platforms, from desktop computers to internet-
+						enabled tablets to cellular phones and PDAs.
+					</div>
+					
+			<div class="choice" id="css_head"><a href="javascript:showBio('css');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="css_plus" style="color:red;">+ </span>Cascading Style Sheets 1.0 - 2.0</a></div>
+					<div class="bio" id="css" style="display:none;">
+						 CSS, or Cascading Style Sheets, is an old specification that is
+						 just now close to being properly implemented by the major
+						 browsers.
+						 <br /><br />
+						 It makes life 1,000 times simpler for web developers
+						 by allowing us to separate the style of a document (like font
+						 color and size, and the positioning of elements) from the
+						 content of a document (the actual text and graphic information).
+					</div>
+					
+			<div class="choice" id="js_head"><a href="javascript:showBio('js');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="js_plus" style="color:red;">+ </span>JavaScript (ECMAScript) 1.0 - 2.0</a></div>
+					<div class="bio" id="js" style="display:none;">
+						 JavaScript (now ECMAScript) is a feature rich programming
+						 language that is supported natively by almost all web
+						 browsers.
+						 <br /><br />
+						 It is powerful enough for complex and interactive applications
+						 to be written to run inside browsers, and simple enough to
+						 accomodate easy enhancements to static web sites.
+					</div>
+					
+			<div class="choice" id="dhtml_head"><a href="javascript:showBio('dhtml');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="dhtml_plus" style="color:red;">+ </span>Dynamic HTML</a></div>
+					<div class="bio" id="dhtml" style="display:none;">
+						 Dynamic HTML is a combination of all of the above technologies.
+						 It involves HTML (or XHTML) and CSS for page
+						 layout, and JavaScript to change the properties
+						 of elements on the page.
+						 <br /><br />
+						 An example of Dynamic HTML is using CSS to position an image
+						 on a page, and using JavaScript to animate that image to the
+						 opposite side of the page.
+						 <br /><br />
+						 Dynamic HTML can be used to create much more complicated pages
+						 as well.  Fully-functional web applications can be written using
+						 Dynamic HTML.
+					</div>
+			<br />
+			Server Side
+			<br />
+			<div class="choice" id="php_head"><a href="javascript:showBio('php');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="php_plus" style="color:red;">+ </span>PHP 3.x - 4.x</a></div>
+					<div class="bio" id="php" style="display:none;">
+						 PHP is an open source embedded scripting language.  It is
+						 easier to implement and faster than Perl.  It can communicate
+						 with just about any database system imaginable.  It can
+						 create images on the fly.
+						 <br /><br />
+						 PHP is our server side language of choice because of its
+						 ease of use and its speed.
+					</div>
+					
+			<div class="choice" id="perl_head"><a href="javascript:showBio('perl');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="perl_plus" style="color:red;">+ </span>Perl 5.x</a></div>
+					<div class="bio" id="perl" style="display:none;">
+						 Perl is also an open source language.  It can be used to
+						 create simple CGI scripts to, for example, parse user-submitted
+						 information or create web pages on the fly.
+						 <br /><br />
+						 Perl can also be used to create more complex, powerful
+						 programs to handle almost any job you could throw at it.  It is
+						 for this reason that Perl is our language of choice for
+						 developing robust, scalable applications that are invincible.
+					</div>
+					
+			<div class="choice" id="mysql_head"><a href="javascript:showBio('mysql');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="mysql_plus" style="color:red;">+ </span>MySQL 3.x</a></div>
+					<div class="bio" id="mysql" style="display:none;">
+						 MySQL is an open source and blazingly fast database system.
+						 We are familiar with creating web-based applications with
+						 MySQL with both PHP and Perl.
+					</div>
+			
+			<div class="choice" id="xml_head"><a href="javascript:showBio('xml');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="xml_plus" style="color:red;">+ </span>XML 1.0</a></div>
+					<div class="bio" id="xml" style="display:none;">
+						 XML, or eXtensible Markup Language, is an emerging standard
+						 that allows for extremely flexible and logical data organization.
+						 <br /><br />
+						 It is not really a server side language, but we believe that
+						 its only real use (from an internet standpoint) is the organization
+						 of data that is to be parsed by some other server side language
+						 before being presented to the user.
+					</div>
+			<br />
+			Applications
+			<br />
+			<div class="choice" id="photoshop_head"><a href="javascript:showBio('photoshop');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="photoshop_plus" style="color:red;">+ </span>Adobe Photoshop 4.0 - 6.0</a></div>
+					<div class="bio" id="photoshop" style="display:none;">
+						 Adobe Photoshop is the industry standard application for
+						 graphics creation and manipulation.  We have been using
+						 and abusing it since version 4.0.
+						 <br /><br />
+						 We also use Adobe ImageReady (bundled with Photoshop 5+)
+						 for image optimization and to create animated GIFs (which
+						 we avoid like the plague).
+					</div>
+			
+			<div class="choice" id="illustrator_head"><a href="javascript:showBio('illustrator');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="illustrator_plus" style="color:red;">+ </span>Adobe Illustrator 8.0 - 9.0</a></div>
+					<div class="bio" id="illustrator" style="display:none;">
+						 Adobe Illustrator is the industry standard application
+						 for creating (guess what) illustrations and other original
+						 graphics like logos.
+					</div>
+					
+			<div class="choice" id="homesite_head"><a href="javascript:showBio('homesite');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="width:100%;"><span id="homesite_plus" style="color:red;">+ </span>Allaire HomeSite 4.0</a></div>
+					<div class="bio" id="homesite" style="display:none;">
+						 Allaire Homesite is an indespensable tool for coding for
+						 web sites.  Since we write all of our own code, we find
+						 that this application is a life saver.  If we could, we'd
+						 marry Homesite.
+					</div>
+			
+			<br />
+			<br />
+			<br />
+			<br />
+			<div class="choice"><a href="javascript:closeSlider('ourskills');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="text-align:right; width:100%;"><span style="color:red;">X </span>Close</a></div>
+		</div>
+	</div>
+	<div class="shadow" style="position:absolute; top:0px; left: 290px;"></div>
+</div>
+<!-- skills div -->
+
+
+
+<!-- client list div -->
+<div id="clientlist" style="position:absolute; top:0px; left: 350px; width:300px; height:100%; visibility:hidden;" onmousedown="void(focusSlider('clientlist'));">
+	<div id="clientlist_white" class="white" style="position:absolute; top:0px; left: 0px;">
+		<div class="head"><img name="clientlist_image" src="img/clientlist.gif" alt="Client List" /></div>
+		<div class="text">
+			Here is a list of the clients with whom
+			we have worked.
+			<br />
+			<br />
+			<div class="list"><span class="mark">+ </span>20wattSHED</div>
+			<div class="list"><span class="mark">+ </span>Expert Computing Solutions</div>
+			<div class="list"><span class="mark">+ </span>First Presbyterian Church<br />&nbsp;&nbsp;&nbsp;&nbsp;Longview, TX</div>
+			<div class="list"><span class="mark">+ </span>Greater Longview United Way</div>
+			<div class="list"><span class="mark">+ </span>Irv Nelson and Associates</div>
+			<div class="list"><span class="mark">+ </span>LifeCare Home Nursing</div>
+			<div class="list"><span class="mark">+ </span>Oak Reflections</div>
+			<div class="list"><span class="mark">+ </span>PlanetSavings.com</div>
+			<br />
+			<br />
+			<br />
+			<br />
+			<div class="choice"><a href="javascript:closeSlider('clientlist');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="text-align:right; width:100%;"><span style="color:red;">X </span>Close</a></div>
+		</div>
+	</div>
+	<div class="shadow" style="position:absolute; top:0px; left: 290px;"></div>
+</div>
+<!-- client list div -->
+
+
+<!-- contact div -->
+<div id="contact" style="position:absolute; top:0px; left: 400px; width:300px; height:100%; visibility:hidden;" onmousedown="void(focusSlider('contact'));">
+	<div id="contact_white" class="white" style="position:absolute; top:0px; left: 0px;">
+		<div class="head"><img name="contact_image" src="img/contact.gif" alt="Contact Us" /></div>
+		<div class="text">
+			There are a number of ways to get in touch with the Humor Tree
+			Design Coalition.
+			<br />
+			<br />
+			Email:<br />
+			<div class="list"><a href="mailto:contact@humortree.com" style="width:100%;">contact@humortree.com</a></div>
+			<br />
+			<br />
+			Telephone:<br />
+			<div class="list">(903) 663 4491</div>
+			<div class="list">(903) 663 2046</div>
+			<br />
+			<br />
+			Facsimile:<br />
+			<div class="list">(903) 663 4591</div>
+			<br />
+			<br />
+			Gmail:<br />
+			<div class="list">
+				122 Oak Isle Drive<br />
+				Longview, TX 75605
+			</div>
+			<br />
+			<br />
+			<br />
+			<br />
+			<div class="choice"><a href="javascript:closeSlider('contact');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="text-align:right; width:100%;"><span style="color:red;">X </span>Close</a></div>
+		</div>
+	</div>
+	<div class="shadow" style="position:absolute; top:0px; left: 290px;"></div>
+</div>
+<!-- contact div -->
+
+
+
+<!-- colophon div -->
+<div id="colophon" style="position:absolute; top:0px; left: 500px; width:300px; height:100%; visibility:hidden;" onmousedown="void(focusSlider('colophon'));">
+	<div id="colophon_white" class="white" style="position:absolute; top:0px; left: 0px;">
+		<div class="head"><img name="colophon_image" src="img/colophon.gif" alt="Colophon &amp; Archives" /></div>
+		<div class="text">
+			<strong>Colophon</strong>
+			<br />
+			<br />
+			All of the code for this web site was written by hand.
+			<br />
+			<br />
+			The layout is acheived using XHTML 1.0 Transitional and CSS 2.0.
+			You can check the validity of the XHTML <a href="http://validator.w3.org/check?uri=http://24.204.14.140/design/" target="_blank">here</a>
+			and that of the CSS <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://24.204.14.140/design/htdc.css" target="_blank">here</a>.
+			<br />
+			<br />
+			The typeface used for the logotype and the section headings is
+			<a href="http://www.adobe.com/type/browser/F/P_176/F_DINS-10005000.html" target="_blank">DIN Schriften</a>.
+			The typeface used for the rest of the text is Verdana if you've got
+			it, Arial or Helvetica if you haven't.
+			<br />
+			<br />
+			The background of the page is completely random.  It is
+			generated on-the-fly by PHP.  Click on the <a href="http://24.204.14.140/design/">Refresh</a>
+			button on your browser, or press Ctrl-R (Cmd-R for Mac)
+			to get a new background.
+			<br />
+			<br />
+			<strong>Archives</strong>
+			<br />
+			<br />
+			You can see the past versions of the Humor Tree Design Coalition's
+			web site by choosing one of the version numbers below.  All of these
+			except version 4 is incomplete.
+			<br />
+			<br /><a href="v1/index.html" target="_blank">Version 1</a>
+			<br /><a href="v2/index.phtml" target="_blank">Version 2</a>
+			<br /><a href="v3/index.html" target="_blank">Version 3</a>
+			<br /><a href="v4/index.html" target="_blank">Version 4</a>
+			<br /><a href="v5/index.php" target="_blank">Version 5</a>
+			<br />
+			<br />
+			<br />
+			<br />
+			<div class="choice"><a href="javascript:closeSlider('colophon');" onmouseover="hilite(this,true);" onmouseout="hilite(this,false);" onclick="this.blur();" style="text-align:right; width:100%;"><span style="color:red;">X </span>Close</a></div>
+		</div>
+	</div>
+	<div class="shadow" style="position:absolute; top:0px; left: 290px;"></div>
+</div>
+<!-- colophon div -->
+</body>
+</html>

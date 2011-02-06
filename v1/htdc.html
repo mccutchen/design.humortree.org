@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+	<script language="javascript">
+		var page = "mouseovers/blank.gif"; // or contact or projects or information
+		var bgcolors = new Array("#888888","#888888","#ff0000","#ffff00","#0000ff");
+		var pre = "mouseovers/";
+		var post = ".gif";
+		var on_ext = "_on";
+		
+		var pages = new Array("inner.html","inner.html","information.html","projects.html","contact.html","inner.html");
+				
+		function swap(which,state)
+		{
+			if(state)
+				document.images[1].src = pre + which + on_ext + post;
+			else if(!state)
+				document.images[1].src = page;
+		}
+		
+		function newpage(which)
+		{
+			if(which == 5 && document.all)
+				window.parent.location.reload();
+			
+			page = pre + which + on_ext + post;
+			document.images[1].src = pre + which + on_ext + post;
+			
+			window.parent.xxx.location = pages[which];
+		}
+	</script>
+</head>
+
+<body bgcolor="#888888">
+
+<table border="0" align="left" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+	<td align="left"><img src="images/htdc.gif"></td>
+	<td align="right">
+	
+	
+	<table border="0" align="right" cellpadding="0" cellspacing="5">
+	<tr>
+		<td align="center" valign="middle"><img src="mouseovers/blank.gif" border="0" width="65" height="5"></td>
+		<td align="center"><a href="javascript:newpage(2);" onmouseover="swap(2,true);" onmouseout="swap(2,false);"><img src="mouseovers/2.gif" border="0"></a></td>
+		<td align="center"><a href="javascript:newpage(3);" onmouseover="swap(3,true);" onmouseout="swap(3,false);"><img src="mouseovers/3.gif" border="0"></a></td>
+		<td align="center"><a href="javascript:newpage(4);" onmouseover="swap(4,true);" onmouseout="swap(4,false);"><img src="mouseovers/4.gif" border="0"></a></td>
+		<td align="center"><a href="javascript:newpage(5);" onmouseover="swap(5,true);" onmouseout="swap(5,false);"><img src="mouseovers/5.gif" border="0"></a></td>
+	</tr>
+	</table>
+	
+	</td>
+</tr>
+</table>
+</body>
+</html>

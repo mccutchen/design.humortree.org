@@ -1,0 +1,22 @@
+.bodyText
+{
+	font: 11px verdana, arial, sans-serif;
+	color: #666666;
+	text-align: justify;
+	vertical-align: top;
+}
+.sidebarText
+{
+	font: 11px verdana, arial, sans-serif;
+	color: #666666;
+}
+a:link,a:visited
+{
+	text-decoration: none;
+	color: #333333;
+}
+a:hover,a:active
+{
+	text-decoration: none;
+	color: red;
+}

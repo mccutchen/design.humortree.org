@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+	<script language="javascript">
+		var colors = new Array("00","33","66","99","cc","ff");
+		
+		function makecolor()
+		{
+			var colorString = "#";
+			
+			var trr = colors[Math.floor(Math.random() * colors.length)];
+			var tgg = colors[Math.floor(Math.random() * colors.length)];
+			var tbb = colors[Math.floor(Math.random() * colors.length)];
+			
+			colorString = colorString + trr + tgg + tbb;				
+			return colorString;
+		}
+		
+		function setbg()
+		{
+			document.bgColor = makecolor();
+		}
+		
+		
+	</script>
+</head>
+
+<body onload="setbg();" link="white" alink="black" vlink="white">
+<table border="0" cellpadding="0" cellspacing="0" align="left">
+<tr>
+	<td align="left" width="465" height="150" valign="top">
+		<a href="javascript:setbg();"><img src="images/bottomthree.gif" border="0" width="465" height="150" title="(click here to change background color)" alt="click here"></a>
+	</td>
+	<td align="left">
+		
+		<table border="0" cellpadding="20" cellspacing="0" align="left" width="465">
+		<tr>
+		<td align="left" height="150" width="465">
+		
+			<table border="0" cellpadding="0" cellspacing="10" align="center">
+			<tr>
+				<td align="left"><font face="arial" size="-1" color="white"><a href="mailto:coalition@humortree.org">coalition@humortree.org</a>&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+				<td align="left"><font face="arial" size="-1" color="white">// EMAIL the COALITION</font></td>
+			</tr>
+			<tr>
+				<td align="left"><font face="arial" size="-1" color="white">
+				P.O. BOX 852<br>
+				Longview, TX 75606
+				</font></td>
+				<td align="left" valign="middle"><font face="arial" size="-1" color="white">// GMAIL the COALITION</font></td>
+			</tr>
+			<td align="left">
+				<font face="arial" size="-1" color="white">
+				903 + 663 + 2046
+				</font>
+			</td>
+			<td align="left"><font face="arial" size="-1" color="white">// TELEPHONE the COALIITON</font></td>
+		</tr>
+		</table>
+				
+		</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>
