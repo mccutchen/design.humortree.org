@@ -1,0 +1,688 @@
+<html>
+<head>
+	<title>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*** l i qui d s *o li d desig n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</title>
+	
+	<meta name="author" content="Rabbi Wax the Tick & Deacon St. Croix, working together by the Grace of the Almighty Entity called God the Father, but not Holy Jesus Christ, since the Rabbi est un petite Juif">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	
+	<script>
+			
+		var captions = new Array();
+		
+		captions[0] = "[ <span class=blurb>contact:</span> various and far-reaching methods to be used to communicate with us ]&nbsp;&nbsp;";
+		captions[1] = "[ <span class=blurb>colophon:</span> an inscription placed at the end of a book [website] usu. with facts relative to its production; ]&nbsp;&nbsp;";
+		captions[2] = "[ <span class=blurb>portfolio:</span>  samples of our work up to this point ]&nbsp;&nbsp;";
+		captions[3] = "[ <span class=blurb>history:</span> the way in which we, as a company, began ]&nbsp;&nbsp;";
+		captions[4] = "[ <span class=blurb>information:</span> pertinent info regarding the mechanics of Liquid Solid Design ]&nbsp;&nbsp;";
+		
+		var divs = new Array();
+		divs[0] = "info";
+		divs[1] = "history";
+		divs[2] = "portfolio";
+		divs[3] = "contact";
+		divs[4] = "colophon";
+		
+		var r = 0;
+		var c = 1;
+		var p = 2;
+		var h = 3;
+		var i = 4;
+		var num;
+		var x;
+		
+		var inPos = -300; // style.left value when completely offscreen
+		var outPos = 30; // style.left value when completely onscreen
+		var wait = 500;  // pause to be used with setTimeout()
+		var dir; // not currently useful
+		var inc = 33; // increment to be moved in or out by
+		
+		var out = "";
+		
+		var what = 'info';
+		
+		window.onLoad = loading();
+		
+		function loading()
+			{	
+				//alert('loading()');
+				
+				if (document.all['imageNum'])
+					{				
+						num = document.images.length;
+						if (num < 10)
+							num = "0" + num;
+				
+						document.all['imageNum'].innerHTML = num;
+				
+						if (num < 43)
+							setTimeout("loading()", 10);
+				
+						else
+							{
+								document.all['lala'].style.textDecoration = "underline";
+								document.all['lala'].innerHTML = "> Document Loaded.  Choose section from Circles at right.";
+								
+							}
+					}
+					
+				else 
+					setTimeout("loading()", 100);
+				
+			}
+		
+		function showCap( what , state)
+			{
+				//alert('works');
+				
+				if (state == 'on')
+					document.all['caption'].innerHTML = captions[what];
+					
+				else // state == 'off'
+					document.all['caption'].innerHTML = "[ ... ]&nbsp;&nbsp;";	
+			}
+		
+		
+		function startMove(what)
+			{
+				//alert('startMove()');
+				//alert(parseInt(document.all[what].style.left));
+				
+				for (x = 0; x <= 4; x++)
+					document.all[divs[x]].style.left = inPos;
+				
+				if (out == what)
+					out = "";	
+				
+				else {
+				
+				if (parseInt(document.all[what].style.left) == -300 )
+					{
+						out = what;
+						document.all['lala'].innerHTML = "> " + what + " section accessed.";
+						goOut(what);
+					}
+					
+				else if (parseInt(document.all[what].style.left) == 30 )
+					{
+						//document.all['lala'].innerHTML = "> Document Loaded. Please choose section from circles at right.";
+						goIn(what);
+						
+					}
+				}
+					
+			}
+			
+		
+		
+		function goIn(what)
+			{
+				document.all[what].style.left = inPos;
+			
+			}
+			
+		function goOut(what)
+			{
+				document.all[what].style.left = outPos;			
+				
+			}
+		
+		function port(what)
+			{
+				window.open(what + ".html", "", "toolbar=yes,location=yes,directories=no,status=no,menubar=yes,scrollbars=yes,resizable=yes,width=530,height=243");
+			}
+		
+					
+	</script>
+	
+	<style>
+	
+		.copy {
+			font-family : arial;
+			font-size : 10;
+			}
+		
+		.intro {
+			font-family : arial;
+			font-size : 11;
+			font-weight : bold;
+			}
+			
+		.blurb {
+			font-family : arial;
+			font-size : 10;
+			color : #000000;
+			}
+		
+	</style>
+	
+</head>
+
+<body bgcolor="#ccff99" TEXT="#336633" LINK="#000000" VLINK="#336633" onLoad="loading();">
+
+<!----------------------------------------Front page Banter-------------------------------------->
+				<div class="copy" style="width: 300; position: absolute; left: 30px; top: 50px;">
+					<img src="images/logo.gif">
+					<br>
+					<br><br>
+					
+					
+					<div style="font-size: 9; border-style: solid; border-width: 1; padding: 5; border-color: #000000;" class="blurb">
+						Image <span id="imageNum" style="font-weight: bold;">00</span> of 43 loaded.
+						<br>
+						<span id="lala">> Document not fully loaded, please wait.</span>
+					</div>
+					
+					<br>
+					This is the official website of Liquid Solid Design, a small <span class="blurb">web</span>and <span class="blurb">graphic design</span> firm located in <span class="blurb">Longview, TX</span>.  You have only reached this page because you are among the dedicated few who use <a href="http://www.microsoft.com/ie">Internet Explorer 4.0+</a> as your web browser.
+					<br>
+					<br>
+					This page uses <span class="blurb">one of four color schemes</span>.  You can see the other schemes by hitting the "back" button on your browser.
+					<br>
+					<br>
+					Our site utilizes a technology called <span class="blurb">Dynamic HTML</span> extensively.  We have used dynamic HMTL on our site to demonstrate our grasp of newer web technologies, as well as our creativity, by having all of the information on the site load in the background, so that when you <span class="blurb">pick a section</span> of our site, <span class="blurb">to the right</span>, you do not have to wait for another page to load.  One drawback of this is that we need to ask you to wait to pick another section of the site until all of the images are loaded. You can check the status of that by looking in the black box at the top of these paragraphs.
+					<br>
+					<br>
+					
+					
+				</div>
+				
+<!----------------------------------------Front page Banter-------------------------------------->
+
+
+
+
+
+
+
+	<table align="left" width="100%" height="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td align="left" valign="bottom" height="100" colspan="2">
+				
+				<br>
+				<br>
+				
+			</td>
+		</tr>
+		
+		<tr>
+			
+			<td align="right" valign="bottom" height="75%">
+				<span id="caption" style="font-family: arial; font-size: 9; z-index: 10; width: 200;">[ ... ]&nbsp;&nbsp;
+				</span>
+				
+				
+			
+			
+				
+				<img src="images/circles.gif" width="212" height="252" usemap="#circles" border="0" align="top">
+
+<map name="circles">
+<area shape="poly" coords="25,182,2,143,10,83,46,51,80,43,80,69,93,92,111,103,131,110,129,128,134,146,110,158,97,171,76,162,56,162,37,171" href="javascript: startMove('contact');" title="***Contact***" alt="***Contact***" onMouseOver="showCap('0','on');" onMouseOut="showCap('0', 'off');">
+<area shape="poly" coords="20,212,31,182,56,163,94,173,109,204,96,238,65,251,34,239" href="javascript: startMove('colophon');" title="***Colophon***" alt="***Colophon***" onMouseOver="showCap('1','on');" onMouseOut="showCap('1', 'off');">
+<area shape="poly" coords="96,173,134,149,172,170,173,208,145,233,110,227,110,199" href="javascript: startMove('portfolio');" title="***Portfolio***" alt="***Portfolio***" onMouseOver="showCap('2','on');" onMouseOut="showCap('2', 'off');">
+<area shape="poly" coords="133,142,130,111,149,87,177,83,206,103,203,147,168,164" href="javascript: startMove('history');" title="***History***" alt="***History***" onMouseOver="showCap('3','on');" onMouseOut="showCap('3', 'off');">
+<area shape="poly" coords="83,42,110,6,151,2,187,38,183,78,149,81,128,107,93,87,82,65" href="javascript: startMove('info');" title="***Information***" alt="***Information***" onMouseOver="showCap('4','on');" onMouseOut="showCap('4', 'off');">
+</map>
+			</td>
+		</tr>
+	</table>
+	
+				
+			
+			
+	
+	
+	
+
+<!---This is the beginning of the <div> that contains the "Information" section. it is the one that is supposed to move out
+when the "i" circle is clicked on.
+
+When this is all the way in, its left position should be -300 
+
+
+----------------------------------------------Information Div------------------------------------->
+	<div id="info" style="position: absolute; left: -300; top: 200; background-color: #66cc66; width: 300;">
+	
+		<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td align="right" valign="middle">
+					<img src="images/pixel.gif" width="166" height="1" align="middle"><br>
+					<img src="images/pixel_dark.gif" width="166" height="2" align="middle">
+				</td>
+				<td align="right" valign="bottom">
+					<img src="images/information.gif" align="middle">
+				</td>
+				
+				<td rowspan="10" align="right">
+					<img src="images/pixel_dark.gif" width="10" height="100%">
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="center" colspan="2">
+					<img src="images/pixel_dark.gif" width="100%" height="5" align="bottom">
+					<img src="images/pixel.gif" width="100%" height="2" align="top">
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="right">
+					<div class="intro">
+						Liquid Solid Design is:
+					</div>
+					
+					<div class="copy">
+						&nbsp;&nbsp;cutting edge technology, like, or including, <span class="blurb">Dynamic Html</span>, JavaScript, <span class="blurb">Cascading Style Sheets</span>, and Flash multimedia productions;
+						<br>
+						a smooth and aesthetically pleasing blend of <span class="blurb">artistic talent</span>, second-to-none coding, and <span class="blurb">skilled design and layout</span>;
+						
+					
+					</div>	
+				</td>
+				
+				<td align="center">
+					<img src="images/diagram01.gif" align="top" align="left">				
+				</td>
+				
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td align="center">
+					<br>
+					<img src="images/diagram02.gif" align="top" align="left">	
+				</td>
+				
+				<td align="left">
+					<div class="copy">
+					<br>
+					
+						Liquid Solid Design is <span class="blurb">not&nbsp; afraid</span> to use the newest methods and technology available to create the <span class="blurb">best quality sites</span> possible.  We will gladly create you two different versions of a site... one with the latest in Dynamic HTML, a new way to make <span class="blurb">lively, non-static</span> sites, and the other with less exciting elements, for those who do not have the latest browser technology.
+					</div>
+				</td>
+				
+				<td></td>
+			</tr>
+			
+		</table>
+		
+	</div>
+
+	
+	
+	<!-------------------------History Div------------------------------------------->
+	<div id="history" style="position: absolute; left: -300; top: 200; background-color: #66cc66; width: 300;">
+	
+		<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td align="right" valign="middle">
+					<img src="images/pixel.gif" width="190" height="1" align="middle"><br>
+					<img src="images/pixel_dark.gif" width="190" height="2" align="middle">
+				</td>
+				<td align="right" valign="bottom">
+					<img src="images/history.gif" align="middle">
+				</td>
+				
+				<td rowspan="10" align="right">
+					<img src="images/pixel_dark.gif" width="10" height="100%">
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="center" colspan="2">
+					<img src="images/pixel_dark.gif" width="100%" height="5" align="bottom">
+					<img src="images/pixel.gif" width="100%" height="2" align="top">
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="right">
+					<div class="intro">
+						Liquid Solid Design is:
+					</div>
+					
+					<div class="copy">
+						<span class="blurb">Will McCutchen</span>, 
+						<br>
+						a young adult male with high hopes and big dreams.  <span class="blurb">"I'd really like to find a way to bring about world peace through the internet and web media."</span>  He is an artist and a designer first and formost, but with a secret, well-hidden <span class="blurb">passion for coding</span>.  Will is a big fan of monochromatic color schemes and non-anti-aliased text;
+						<br>
+					</div>	
+				</td>
+				
+				<td align="center">
+					<img src="images/will_.gif" align="top" align="left">				
+				</td>
+				
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td align="center">
+					<br>
+					<img src="images/jacob_.gif" align="top" align="left">	
+				</td>
+				
+				<td align="left">
+					<div class="copy">
+						<span class="blurb">Jacob Bailey</span>,<br>
+						another whitebread middle-class clean-cut American hero-child, who has clerical aspirations.  <span class="blurb">"I am sick and tired of homogenized web-sites.  I am here to bring about an internet revolution!"</span>  He is an artist, like young William, but says his true passion is <span class="blurb">writing and recording <i>original</i> music</span>.
+						
+					</div>
+				</td>
+				
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="left">
+					<br>
+					<div class="copy">
+						<span class="intro">
+							Their partnership
+						</span>
+						&nbsp;is the result of <span class="blurb">years of struggle</span>, on the parts of both of them, against mainstream ideas about design, be it print-, television-, or web-oriented.  <span class="blurb">Liquid Solid Design</span> is poised to usher in a new era in both art and technology.
+					</div>
+				</td>
+			</tr>
+			
+		</table>
+		
+	</div>
+
+	
+	<!------------------------- Colophon Div------------------------------------------->
+	<div id="colophon" style="position: absolute; left: -300; top: 200; background-color: #66cc66; width: 300;">
+	
+		<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td align="right" valign="middle">
+					<img src="images/pixel.gif" width="169" height="1" align="middle"><br>
+					<img src="images/pixel_dark.gif" width="169" height="2" align="middle">
+				</td>
+				<td align="right" valign="bottom">
+					<img src="images/colophon.gif" align="middle">
+				</td>
+				
+				<td rowspan="10" align="right">
+					<img src="images/pixel_dark.gif" width="10" height="100%">
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="center" colspan="2">
+					<img src="images/pixel_dark.gif" width="100%" height="5" align="bottom">
+					<img src="images/pixel.gif" width="100%" height="2" align="top">
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="right">
+					<div class="intro">
+						Colophon:
+					</div>
+					
+					<div class="copy">
+						<br>
+							The font we used in the creation of our logo and the various section headers is called <span class="blurb">Connection.</span>  The font used for the body text is called Arial, and, for the most part, it was used in a size of <span class="blurb">09 pt.</span>
+						<br>
+					</div>	
+				</td>
+				
+				<td align="center">
+					<img src="images/diagram03.gif" align="top" align="left">				
+				</td>
+				
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td align="center">
+					<br>
+					<img src="images/diagram04.gif" align="top" align="left">	
+				</td>
+				
+				<td align="left">
+					<div class="copy">
+						The three colors used in this site, in hexadecimal notation, other than <span class="blurb">#000000</span>{black} and <span class="blurb">#ffffff</span>{white} are: <span class="blurb">#ffcc33</span>{yellow [background color]};  <span class="blurb">#cc6633</span>{almost brown}; <span class="blurb">#66cc66</span>{middle color}.
+					</div>
+				</td>
+				
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td align="center" colspan="2">
+					<br>
+					<div class="copy">
+						The programs we used in the creation of this site include, but are not limited to: &nbsp;&nbsp;&nbsp;<span class="blurb">Allaire Homesite 4.0</span>;  <span class="blurb">Macromedia Fireworks 2</span>;  <span class="blurb">Jasc Paint Shop Pro 5.0</span>.
+						<br>
+						<br>
+						
+					</div>
+				</td>
+				
+				
+			</tr>
+			
+		</table>
+		
+	</div>
+	
+	<!------------------------- Contact Div------------------------------------------->
+	<div id="contact" style="position: absolute; left: -300; top: 200; background-color: #66cc66; width: 300;">
+		<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td align="right" valign="middle">
+					<img src="images/pixel.gif" width="197" height="1" align="middle"><br>
+					<img src="images/pixel_dark.gif" width="197" height="2" align="middle">
+				</td>
+				<td align="right" valign="bottom">
+					<img src="images/contact.gif" align="middle">
+				</td>
+				
+				<td rowspan="10" align="right">
+					<img src="images/pixel_dark.gif" width="10" height="100%">
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="center" colspan="2">
+					<img src="images/pixel_dark.gif" width="100%" height="5" align="bottom">
+					<img src="images/pixel.gif" width="100%" height="2" align="top">
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="left">
+				<div class="copy">	
+					<span class="intro">email:</span><br>
+					<img src="images/pixel_dark.gif" width="100%" height="2">
+					<a href="mailto:liquidsoliddesign@hotmail.com">liquidsoliddesign@hotmail.com</a>
+					<br>
+					<a href="mailto:mccutch@longview.net">mccutch@longview.net</a>
+					<br>
+					<a href="mailto:dadeba@worldnet.att.net">dadeba@worldnet.att.net</a>
+					<br>
+					<br>
+				</div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="left">
+				<div class="copy">
+					<span class="intro">telephone:</span><br>
+					<img src="images/pixel.gif" width="100%" height="3">
+					903:663:4491<br>
+					903:663:2426<br>
+					<br>
+				</div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="left">
+				<div class="copy">
+					<span class="intro">facsimile:</span><br>
+					<img src="images/pixel_dark.gif" width="100%" height="1">
+					903:663:4781<br>
+					903:663:4591<br>
+				</div>
+				</td>
+			</tr>
+		</table>
+					
+	</div>
+	
+	
+	<!-------------------------Portfolio Div------------------------------------------->
+	<div id="portfolio" style="position: absolute; left: -300; top: 200; background-color: #66cc66; width: 300;">
+	
+		<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+				<td align="right" valign="middle">
+					<img src="images/pixel.gif" width="177" height="1" align="middle"><br>
+					<img src="images/pixel_dark.gif" width="177" height="2" align="middle">
+				</td>
+				<td align="right" valign="bottom">
+					<img src="images/portfolio.gif" align="middle">
+				</td>
+				
+				<td rowspan="10" align="right">
+					<img src="images/pixel_dark.gif" width="10" height="100%">
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="center" colspan="2">
+					<img src="images/pixel_dark.gif" width="100%" height="5" align="bottom">
+					<img src="images/pixel.gif" width="100%" height="2" align="top">
+				</td>
+			</tr>
+			
+			<!------------------------------PlanetSavings row--------------------------------->
+			<tr>
+				<td align="left" colspan="2">
+					<div class="intro">
+						Web Site Design<br>
+					</div>
+					
+					
+					<img src="images/pixel.gif" width="100%" height="2" align="top">
+					
+					<div class="copy" align="left">
+						
+						<span class="copy"><a href="javascript: port('planetsavings');">PlanetSavings.com</a></span>
+						
+					</div>
+											
+				</td>
+				
+				<td></td>
+			</tr>
+			
+			
+			<!--------------------------------------INA row-__++=------------------------------->
+			<tr>
+				<td align="left" colspan="2">
+					
+					<div class="copy" align="left">
+						
+						<span class="copy"><a href="javascript: port('ina');">Irv Nelson & Associates</a></span>
+						
+					</div>
+					
+				</td>
+				
+				
+				<td></td>
+			</tr>
+			
+			
+			<!-------------------------------Oak Reflections row----------------------------->
+			<tr>
+				<td align="left" colspan="2">
+					
+					<div class="copy" align="left">
+						
+						<span class="copy"><a href="javascript: port('oakreflections');">Oak Reflections</a></span>
+						
+					</div>
+					
+				</td>
+				
+				
+				<td></td>
+			</tr>
+			
+			<!----------------------------------------United Way Longview------------------->
+			<tr>
+				<td align="left" colspan="2">
+					<div class="copy" align="left">
+						
+						<span class="copy"><a href="javascript: port('unitedway');">United Way of Longview</a></span>
+						
+					</div>
+				</td>
+				
+				
+				<td></td>
+			</tr>
+			
+			<!---------------------------------------- Flash Site------------------->
+			<tr>
+				<td align="left" colspan="2">
+					<div class="copy" align="left">
+						
+						<span class="copy"><a href="javascript: port('20wattshed');">20wattSHED Flash&copy; Page</a></span>
+						
+					</div>
+					
+				</td>
+				
+				
+				<td></td>
+			</tr>
+			
+			
+			<!----------------------------------------HOAR row------------------->
+			
+			<tr>
+				<td align="right" colspan="2">
+					<div class="intro">
+						<br>Graphic Design
+					</div>
+					<img src="images/pixel_dark.gif" width="100%" height="3" align="top">
+					<div class="copy" align="right">
+						<span class="copy"><a href="javascript: port('hoar');">HOAR 1999 Flyer</a></span>
+					</div>
+						
+				</td>
+				
+				<td></td>
+			</tr>
+			
+			
+			<!---------------------------------------- 213 degree row------------------->
+			<tr>
+				<td align="right" colspan="2">
+					<div class="copy" align="right">
+						
+						<span class="copy"><a href="javascript: port('213degree');">213 Degree Splash Page</a></span>
+						
+					</div>
+					<br>
+					
+				</td>
+				
+				
+				<td></td>
+			</tr>
+		</table>
+		
+	</div>
+
+</body>
+
+</html>
