@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+	<script>
+		
+		var colors = new Array("#888888","#888888","#9999cc","#ffcc99","#ff99cc","#999900","#0066cc","#cc0000","#ff9900","#000000")
+			
+		function init()
+		{
+			moo = new Array();
+        		
+			moo[0] = new Image();
+      moo[0].src = "no.gif";
+			
+			var bg = colors[Math.floor(Math.random() * colors.length)];
+			
+			document.writeln("<body bgcolor=\"" + bg + "\">");
+			document.writeln("<table border=\"0\" align=\"right\" width=\"100%\" height=\"100%\" cellpadding=\"10\" cellspacing=\"0\">");
+			document.writeln("<tr>");
+			document.writeln("<td height=\"100%\" align=\"right\" valign=\"middle\">");
+			document.writeln("<a href=\"right.html\" target=\"right\" onmouseover=\"swap(1);\" onmouseout=\"swap(0);\" onclick=\"changeColor();this.blur();\">");
+			document.writeln("<img src=\"logo.gif\" border=\"0\">");
+			document.writeln("</a>");
+			document.writeln("</td></tr></table></body></html>");
+		}
+		
+		function swap(wh)
+		{
+			if(wh == 1)
+			 document.images[0].src = "no.gif";
+			 
+			else
+				document.images[0].src = "logo.gif";
+		}
+		
+		function changeColor()
+		{
+			document.bgColor = colors[Math.floor(Math.random() * colors.length)];
+			parent.right.document.bgColor = document.bgColor;
+		}
+		
+		init();
+		
+	</script>
+</head>
+
+</html>
