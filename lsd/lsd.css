@@ -1,0 +1,115 @@
+/* A minimal CSS file added to hopefully isolate as many of the color rules
+   as possible.  Just trying to narrow the various color schemes down to one
+   file with as little work as I can. */
+
+body {
+    background-color: #ccc;
+    color: #333;
+    font: 11px arial;
+}
+a { 
+    color: #000; 
+}
+a:visited { 
+    color: #333; 
+}
+.page {
+    position: absolute;
+    left: -290px;
+    top: 190px;
+    width: 300px;
+    background-color: #999;
+}
+.page table {
+    border-right: 10px solid;
+}
+
+
+/*---------------------------------------------------------------------------
+    Orange theme
+----------------------------------------------------------------------------*/
+body.orange {
+    background-color: #fc3;
+    color: #c63;
+}
+body.orange a:visited { 
+    color: #c63; 
+}
+body.orange div.page {
+    background-color: #f90;
+}
+
+
+/*---------------------------------------------------------------------------
+    Blue theme
+----------------------------------------------------------------------------*/
+body.blue {
+    background-color: #9cf;
+    color: #00c;
+}
+body.blue a:visited { 
+    color: #00c; 
+}
+body.blue div.page {
+    background-color: #36f;
+}
+
+
+/*---------------------------------------------------------------------------
+    Green theme
+----------------------------------------------------------------------------*/
+body.green {
+    background-color: #cf9;
+    color: #363;
+}
+body.green a:visited { 
+    color: #363; 
+}
+body.green div.page {
+    background-color: #6c6;
+}
+
+
+/*---------------------------------------------------------------------------
+    Red theme
+----------------------------------------------------------------------------*/
+body.red {
+    background-color: #f99;
+    color: #903;
+}
+body.red a:visited { 
+    color: #903; 
+}
+body.red div.page {
+    background-color: #f00;
+}
+
+
+/*---------------------------------------------------------------------------
+    Theme-independent files
+----------------------------------------------------------------------------*/
+#nav {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+#intro {
+    position: absolute;
+    left: 30px;
+    top: 50px;
+    width: 300px;
+}
+.copy {
+    font-size: 10px;
+}
+.intro {
+    font-weight: bold;
+}
+.blurb {
+    color: #000;
+}
+div.blurb {
+    font-size: 9px;
+    border: 1px solid;
+    padding: 5px;
+}
