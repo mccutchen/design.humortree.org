@@ -14,7 +14,15 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    margin: 10px 0 20px 0;
+    margin-bottom: 40px;
+    font-size: 24px;
+    margin-left: 30px;
+}
+h1 span {
+    font-size: 18px;
+    text-transform: lowercase;
+    margin-left: -30px;
+    font-style: italic;
 }
 
 section {
@@ -27,9 +35,37 @@ section {
     width: 250px;
     padding-right: 40px;
 }
+.intro p, .intro li {
+    line-height: 1.5;
+}
+.intro p:first-child {
+    margin-top: 0;
+}
+.intro li {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
 
 .versions {
     margin-top: -10px;
+}
+
+.logo {
+    background-color: #fff;
+    padding: 2px;
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,.15);
+}
+
+.versions h2 {
+    font-size: 18px;
+    margin: 30px 0 20px;
+    font-style: italic;
+}
+.versions h2:first-child {
+    margin-top: 0;
+}
+.versions h2 span {
+    font-style: italic;
 }
 
 .site {
@@ -38,7 +74,7 @@ section {
     padding: 10px;
     display: inline-block;
     vertical-align: top;
-    margin: 10px;
+    margin: 0 20px 20px 0;
     font-size: 12px;
     -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, .15);
     -moz-box-shadow: 1px 1px 6px rgba(0, 0, 0, .15);
@@ -49,6 +85,7 @@ section {
     display: block;
     margin-bottom: 5px;
     border: none;
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,.15);
 }
 .site h3 {
     font-size:;
@@ -59,18 +96,7 @@ section {
     font-family: "Lucida Grande", Verdana, sans-serif;
     font-size: 11px;
 }
-.site h3 span:before {
-    content: ' – “';
-}
-.site h3 span:after {
-    content: '”';
-}
 
 .site p {
     margin: 0;
-}
-
-.site p.meta span {
-    font-size: 11px;
-    font-style: italic;
 }
