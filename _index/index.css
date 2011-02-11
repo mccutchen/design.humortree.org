@@ -7,6 +7,12 @@ body {
     min-width: 1024px;
 }
 
+a {
+    color: #000;
+    border-bottom: 1px dotted #666;
+    text-decoration: none;
+}
+
 h1, h2, h3, h4 {
     margin: 0;
     padding: 0;
@@ -99,4 +105,17 @@ section {
 
 .site p {
     margin: 0;
+}
+
+
+footer {
+    display: block;
+    font: 11px "Lucida Grande", Verdana, sans-serif;
+    color: #666;
+    background-color: #fff;
+    padding: 10px 20px;
+    margin: 40px -20px -20px -20px;
+    -webkit-box-shadow: 0 -2px 2px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 -2px 2px rgba(0,0,0,.1);
+    box-shadow: 0 -2px 2px rgba(0,0,0,.1);
 }
