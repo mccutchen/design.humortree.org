@@ -60,6 +60,8 @@ section {
     background-color: #fff;
     padding: 2px;
     -webkit-box-shadow: 0 0 4px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,.15);
+    box-shadow: 0 0 4px rgba(0,0,0,.15);
 }
 
 .versions h2 {
@@ -92,6 +94,8 @@ section {
     margin-bottom: 5px;
     border: none;
     -webkit-box-shadow: 0 0 4px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,.15);
+    box-shadow: 0 0 4px rgba(0,0,0,.15);
 }
 .site h3 {
     font-size:;
