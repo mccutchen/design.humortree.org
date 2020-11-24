@@ -1,0 +1,176 @@
+<!-- no !DOCTYPE because this site needs to show up well in Netscape 4, and to make  -->
+<!-- it do that and still show up well in Netscape 6 and IE 5(mac) and 6(win) i have -->
+<!-- to turn off the DTD.  Netscape can rot in hell for all i care.                  -->
+
+<html>
+
+<head>
+    <title>HTDC version 4.0 beta 3</title>
+
+    <link rel="stylesheet" type="text/css" href="htdc.css">
+
+    <script type="text/javascript">
+        function swap(which, state) {
+            var ext = (state) ? "_on.jpg" : "_off.jpg";
+            document.images[which].src = "img/nav_" + which + ext;
+        }
+    </script>
+
+    <meta http-equiv="pragma" CONTENT="no-cache">
+    <meta name="ROBOTS" content="ALL">
+    <meta name="DESCRIPTION" content="">
+    <meta name="KEYWORDS" content="">
+    <meta name="AUTHOR" content="will mccutchen - will@humortree.org">
+
+</head>
+
+<body bgcolor="#666666">
+
+    <table border="0" align="center" cellpadding="0" cellspacing="0" height="100%">
+        <tr>
+            <td height="100%" valign="middle" align="center">
+
+
+
+
+
+
+
+
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td align="left" colspan="2"><img src="img/logo.jpg" alt="The Humor Tree Design Coalition"></td>
+                    </tr>
+                    <tr>
+                        <td height="5" colspan="2">
+                            <!-- a spacer TD tag -->
+                        </td>
+                    <tr>
+                        <td align="left" width="280" bgcolor="white" class="bodytext">
+                            <!-- content of the page goes here -->
+
+                            <table border="0" cellpadding="0" cellspacing="7" width="100%">
+                                <tr>
+                                    <td align="left"><img src="img/header_us.jpg" alt="Us."></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" valign="top" class="bodyText">
+                                        <br>
+                                        &nbsp;&nbsp;The Humor Tree Design Coalition (HTDC) is a group of
+                                        young men who are out to change the world. We are
+                                        talented and dynamic. We are always learning new things
+                                        and looking at old things in new ways.
+                                        <br>
+                                        <br>
+                                        &nbsp;&nbsp;The HTDC looks at each project as a problem. We know
+                                        there is a solution, and we know the best way to find
+                                        it.
+                                        <br>
+                                        <br>
+                                        &nbsp;&nbsp;We are a problem soliving organization. We love
+                                        the chance to be creative, to do things differently.
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- content stops here -->
+                        </td>
+                        <td bgcolor="#cccccc" width="220">
+                            <!-- sidebar starts here -->
+
+                            <table border="0" cellpadding="0" cellspacing="5" align="center">
+                                <tr>
+                                    <td align="right" class="sidebarText">Skills |</td>
+                                    <td align="left" class="sidebarText"><a href="javascript:void(null);">Design</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td align="left" class="sidebarText"><a
+                                            href="javascript:void(null);">Programming</a></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td align="left" class="sidebarText"><a
+                                            href="javascript:void(null);">Architecture</a></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td align="left" class="sidebarText"><a
+                                            href="javascript:void(null);">Copywriting</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="sidebarText">&nbsp;</td>
+                                    <td class="sidebarText">&nbsp;</td>
+                                </tr>
+
+                                <tr>
+                                    <td align="right" class="sidebarText">Contact |</td>
+                                    <td align="left" class="sidebarText"><a href="mailto:coalition@humortree.com">email
+                                            us</a></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td align="left" class="sidebarText">or</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td align="left" class="sidebarText">(903) 663 4491</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td align="left" class="sidebarText">122 Oak Isle Dr.</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td align="left" class="sidebarText">Longview, TX 75605</td>
+                                </tr>
+                            </table>
+
+                            <!-- sidebar ends here -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" colspan="2">
+                            <!-- navigation goes here -->
+
+                            <table border="0" cellpadding="0" cellspacing="7" align="right">
+                                <tr>
+                                    <td><a href="us.html" onmouseover="swap('us',true);"
+                                            onmouseout="swap('us',false);"><img name="us" src="img/nav_us_off.jpg"
+                                                border="0" alt="Us."></a></td>
+                                    <td width="5"></td>
+                                    <td><a href="#" onmouseover="swap('work',true);"
+                                            onmouseout="swap('work',false);"><img name="work" src="img/nav_work_off.jpg"
+                                                border="0" alt="Us."></a></td>
+                                    <td width="5"></td>
+                                    <td><a href="#" onmouseover="swap('play',true);"
+                                            onmouseout="swap('play',false);"><img name="play" src="img/nav_play_off.jpg"
+                                                border="0" alt="Us."></a></td>
+                                </tr>
+                            </table>
+
+                            <!-- navigation stops here -->
+                        </td>
+                    </tr>
+                </table>
+
+
+
+
+
+
+
+
+
+
+            </td>
+        </tr>
+    </table>
+    <script>
+        var splashNum = ((Math.random() * 6) + 1) | 0; // random int from 1 to 6, inclusive
+        document.getElementById("splash").src = `img/splashes/${splashNum}.jpg`;
+    </script>
+</body>
+
+</html>
