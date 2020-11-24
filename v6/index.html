@@ -11,14 +11,15 @@
 	<meta name="KEYWORDS" content="humortree humor tree design coalition web design programming php perl javascript html xhtml css" />
 	<meta name="AUTHOR" content="will mccutchen - will@humortree.org" />
 
-	<script type="text/javascript" src="HTLIB.js">/* cross browser DHTML library copyright © 1981-2001 Will McCutchen */</script>
+	<script type="text/javascript" src="HTLIB.js">/* cross browser DHTML library copyright Â© 1981-2001 Will McCutchen */</script>
 	<script type="text/javascript" src="slider.js">/* page-specific javascript */</script>
-
+	<script type="text/javascript" src="lines.js">/* background image generator */</script>
 	<link rel="stylesheet" type="text/css" href="htdc.css" />
 
 </head>
 
 <body onload="init();">
+	<script>document.body.style.backgroundImage = `url(${drawLines()})`;</script>
 
 <!-- main div -->
 <div id="main" style="position:absolute; top:0px; left: 300px; width:300px; height:100%;" onmousedown="void(focusSlider('main'));">
@@ -375,11 +376,11 @@
 			web site by choosing one of the version numbers below.  All of these
 			except version 4 is incomplete.
 			<br />
-			<br /><a href="v1/index.html" target="_blank">Version 1</a>
-			<br /><a href="v2/index.php" target="_blank">Version 2</a>
-			<br /><a href="v3/index.html" target="_blank">Version 3</a>
-			<br /><a href="v4/index.html" target="_blank">Version 4</a>
-			<br /><a href="v5/index.php" target="_blank">Version 5</a>
+			<br /><a href="../v1/" target="_blank">Version 1</a>
+			<br /><a href="../v2/" target="_blank">Version 2</a>
+			<br /><a href="../v3/" target="_blank">Version 3</a>
+			<br /><a href="../v4/" target="_blank">Version 4</a>
+			<br /><a href="../v5/" target="_blank">Version 5</a>
 			<br />
 			<br />
 			<br />
