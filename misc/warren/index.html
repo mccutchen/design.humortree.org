@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<TITLE>will's solution</TITLE>
+<SCRIPT LANGUAGE = "JavaScript"><!--
+
+var dir = "up" // or "down"
+var frame = 2;
+var root = "sqr/sqr02bA";
+var ext = ".gif";
+var del = 10;
+
+function preLoad() //////////////////PRELOAD IMAGES//////////////////////////
+{
+	var imgs = new Array();
+	i = 0;
+	for (y = 1; y <= 10 ; y++)
+	{
+		imgs[i] = new Image();
+		imgs[i].src = root + y + ext;
+		i++;
+	}
+	
+}////////////////////////////////////////////////////////////////////////////
+
+function animateGraphic()
+{
+	if (dir == "up") up();
+	
+	else down();
+}
+
+function up()
+{
+	if (frame <= 10)
+	{
+		document.images[0].src = root + frame + ext;
+		frame ++;
+		setTimeout("up();",del);
+	}
+	
+	else
+	{
+		frame = 9;
+		dir = "down";
+		return;
+	}
+}
+
+function down()
+{
+	if (frame >= 1)
+	{
+		document.images[0].src = root + frame + ext;
+		frame --;
+		setTimeout("down();",del);
+	}
+	
+	else
+	{
+		frame = 2;
+		dir = "up";
+		return;
+	}
+}
+
+//--></SCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR = "#333333" TEXT="CCCCCC" onLoad="preLoad();">
+<CENTER><FONT FACE="Century Gothic, Avant Garde" SIZE=2>
+<H3>Eureka!</H3><BR>
+<IMG NAME= "sqr0" BORDER = 0 HEIGHT = 60 WIDTH = 60 SRC = "sqr/sqr02bA1.gif" onClick="animateGraphic()">&nbsp;&nbsp;
+<BR><BR>
+click on the image to run the animation.  speed up or down by changing "del" variable in the script.
+<br>
+includes a preload function i wrote a long time ago, to automate the proloading of images in a numbered series... it seems to work.
+</center>
+</BODY>
+</HTML>
