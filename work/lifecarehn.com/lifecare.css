@@ -1,0 +1,60 @@
+.nav
+{
+	font: 16px georgia,times,serif;
+	font-weight: bold;
+	color: #336666;
+}
+.bottomnav,.subnav
+{
+	font: 12px georgia, times, serif;
+	font-weight: bold;
+	color: #336666;
+}
+.bodytext
+{
+	font: 14px/24px georgia,times,serif;
+	color: black;
+}
+.starter
+{
+	font-size: 18px;
+}
+h1
+{
+	font: 24px georgia, times, serif;
+	color: #336666;
+}
+.highlighttext
+{
+	font: 24px/40px georgia, times, serif;
+	color: #993300;
+}
+.extralarge
+{
+	font-size: 32px;
+}
+a:link, a:visited
+{
+	color: #336666;
+	text-decoration: none;
+}
+a:hover,a:active
+{
+	color: #993300;
+	text-decoration: underline;
+}
+.copyright
+{
+	font: 10px/14px verdana, arial, sans-serif;
+	color: #666666;
+	padding: 3px;
+}
+.othertext
+{
+	font: 14px/20px georgia, times, serif;
+	color: black;
+}
+.inline
+{
+	display: inline;
+}
