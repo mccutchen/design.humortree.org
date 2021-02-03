@@ -1,0 +1,354 @@
+/******************************************************************************
+	base.css
+
+	Sets up the basic styles inherited by every page.
+******************************************************************************/
+
+
+/******************************************************************************
+	Includes
+******************************************************************************/
+@import url(hacks.css);
+
+
+/******************************************************************************
+	Reset CSS
+	http://textsnippets.com/posts/show/465
+******************************************************************************/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,pre,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+cite,code,em,strong,th{font-style:normal;font-weight:normal;}
+th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%; font-weight: normal; font-style:normal;}
+q:before,q:after{content:'';}
+
+
+/******************************************************************************
+	basic styles
+******************************************************************************/
+html { font-size: 10px; }
+
+body {
+	font-family: Georgia, Sans-Serif;
+	font-size: 1.2em;
+	padding: 20px;
+}
+
+/* basic margins */
+h1, h2, h3, h4, h5, h6, p, blockquote {
+	margin: 10px 0;
+}
+
+h1 {
+	font-size: 2.4em;
+}
+h2 {
+	font-size: 2.1em;
+}
+h3 {
+	font-size: 1.8em;
+	color: #741010;
+}
+h4 {
+	font-size: 1.6em;
+}
+
+p {
+	line-height: 1.5;
+}
+
+a, a:link {
+	color: #225B6F;
+}
+a img {
+	border: none;
+}
+
+
+/******************************************************************************
+	Accessibility/text-only styles
+******************************************************************************/
+div#header a.skip-nav,
+hr {
+	display: none;
+}
+
+
+/******************************************************************************
+	Header
+******************************************************************************/
+div#header {
+	margin: -20px;
+	margin-bottom: 0;
+	background-color: #741010;
+	/* the background gradient is actually applied to ul#navigation */
+}
+div#header h1 {
+	background: transparent url(../images/logo.gif) no-repeat left center;
+	text-indent: -1000em;
+	overflow: hidden;
+	padding: 10px 0;
+	height: 43px;
+	margin: 0 20px;
+}
+div#header h1 a {
+	display: block;
+	height: 100%;
+	width: 647px;
+	margin: 0;
+	padding: 0;
+}
+div#header h2 {
+	margin: 0;
+	padding: 10px 20px;
+	color: #fff;
+	background: #77ABBF url(../images/backgrounds/headline-bg.jpg) repeat-x bottom left;
+	font-size: 2.0em;
+}
+
+
+/******************************************************************************
+	Navigation
+******************************************************************************/
+div#header ul {
+	margin: 0;
+	padding: 0;
+	padding-left: 20px;
+	list-style-type: none;
+	font-size: 11px;
+
+	background: transparent url(../images/backgrounds/header-bg.jpg) repeat-x bottom left;
+}
+div#header ul li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	margin-right: 1px;
+}
+div#header ul a {
+	display: block;
+	padding: .5em 1em;
+	color: #fff;
+	text-decoration: none;
+	background-color: #77ABBF;
+}
+div#header ul a:link, div#header ul a:visited {
+	background-color: #3E7A8F;
+	background: #3E7A8F url(../images/backgrounds/nav-bg.jpg) repeat-x bottom left;
+}
+div#header ul a:hover {
+	background: none;
+	background-color: #77ABBF;
+}
+
+
+/******************************************************************************
+	Breadcrumbs
+******************************************************************************/
+div#breadcrumbs {
+    font: 10px Verdana, Arial, Sans-serif;
+    color: #999;
+    background-color: #eee;
+	border-top: 1px solid #fff;
+    padding: 5px 20px;
+}
+div#breadcrumbs a, div#breadcrumbs a:link {
+	text-decoration: none;
+	color: #333;
+}
+
+
+/******************************************************************************
+	Footer
+******************************************************************************/
+div#footer {
+	clear: both;
+	margin: 20px -20px 0 -20px;
+	padding: 10px;
+
+	background-color: #741010;
+	color: #fff;
+
+	font-size: 11px;
+}
+div#footer ul {
+	list-style-type: none;
+	margin: 0;
+	margin-left: -10px;
+	padding: 0;
+}
+div#footer ul li {
+	background: none;
+	margin: 0;
+	padding: 0 10px;
+	display: inline;
+	border-right: 1px solid #999;
+}
+div#footer a {
+	color: #fff;
+	font-weight: bold;
+}
+
+
+/******************************************************************************
+	Page styles
+******************************************************************************/
+div#content {
+	width: 800px;
+}
+
+p.intro:first-line, * html p.intro span {
+	font-size: 1.4em;
+	color: #741010;
+}
+
+/* ULs will get little star bullets by default */
+ul {
+	list-style-type: none;
+}
+li {
+	padding-left: 20px;
+	background: transparent url(../images/icons/bullet_star.gif) no-repeat top left;
+	margin: .5em 0;
+}
+/*
+ul.links li {
+	background-image: url(/images/icons/bullet_go.gif);
+}
+*/
+
+/* images in paragraphs are floated right by default */
+p img {
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+img.polaroid {
+	background-color: #fff;
+	padding: 5px;
+	border: 1px solid #ccc;
+}
+
+div.photo {
+	margin: 2em 0;
+}
+div.photo p {
+	font: 11px Verdana, Sans-Serif;
+	margin-top: 0;
+	text-align: center;
+}
+
+.address {
+	font-style: italic;
+}
+
+/******************************************************************************
+	Columns
+******************************************************************************/
+div.columns {
+	clear: both;
+}
+div.columns div.left {
+	float: left;
+	margin-right: 40px;
+}
+div.columns div.right {
+	float: left;
+}
+
+div.sixty-forty div.left {
+	width: 460px;
+}
+div.sixty-forty div.right {
+	width: 300px;
+}
+
+div.fifty-fifty div.left {
+	width: 380px;
+}
+div.fifty-fifty div.right {
+	width: 380px;
+}
+
+
+/******************************************************************************
+	Home/Index
+******************************************************************************/
+img.splash {
+	width: 448px;
+}
+
+div#careclicks {
+	background-color: #77ABBF;
+	color: #fff;
+	border: 1px solid #2A5160;
+	font: 14px verdana, arial, sans-serif;
+	margin-top: 40px;
+}
+div#careclicks p {
+	border: 1px solid #fff;
+	padding: 5px 10px;
+	margin: 0;
+}
+
+
+/******************************************************************************
+	About
+******************************************************************************/
+div#news ul {
+	list-style-type: none;
+}
+div#news li {
+	margin: 10px 0;
+	padding: 0;
+	background: none;
+}
+div#news li span {
+	font-size: 11px;
+	font-weight: bold;
+	color: #741010;
+}
+
+
+/******************************************************************************
+	Architecture
+******************************************************************************/
+ul.architecture-thumbs {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul.architecture-thumbs li {
+	background: none;
+	padding: 0;
+	margin: 1em 0;
+}
+ul.architecture-thumbs li img {
+	display: block;
+	background-color: #fff;
+	padding: 5px;
+	border: 1px solid #ccc;
+}
+
+
+/******************************************************************************
+	Contacts
+******************************************************************************/
+table.contacts th, table.contacts td {
+	text-align: left;
+	padding: 5px 10px;
+}
+table.contacts thead th {
+	font-size: 1.8em;
+	color: #741010;
+	padding-top: 1em;
+	padding-left: 0;
+}
+table.contacts tbody th, table.contacts td {
+	border-top: 1px solid #eee;
+}
+table.contacts tbody th {
+	font-size: .92em;
+	font-weight: bold;
+}

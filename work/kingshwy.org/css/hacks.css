@@ -1,0 +1,51 @@
+/******************************************************************************
+	hacks.css
+
+    Collecting all the weird CSS hacks used in one place.
+******************************************************************************/
+
+
+/******************************************************************************
+	Easy-clearing hack from Position Is Everything
+	http://positioniseverything.net/easyclearing.html
+******************************************************************************/
+div#header ul:after,
+div#content:after,
+div.columns:after,
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html div#header ul,
+* html div#content,
+* html div.columns,
+* html .clearfix {
+    height: 1%;
+}
+
+div#content:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html div#content {
+    height: 1%;
+}
+
+
+/******************************************************************************
+	Address IE's "peekaboo bug"
+    http://positioniseverything.net/explorer/peekaboo.html
+******************************************************************************/
+* html ul,
+* html li,
+* html div.columns,
+* html div.columns div.left,
+* html div.columns div.right {
+	position: relative;
+}
