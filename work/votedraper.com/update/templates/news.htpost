@@ -1,0 +1,20 @@
+<?php 
+	include ("header.php");
+	printHeader ("News");
+?>
+
+
+
+<div class="standalone">
+	<h1>News</h1>
+	<h1>* * *</h1>
+	<HTpost:posts>
+	<h1>* * *</h1>
+</div>
+
+
+
+<?php
+	include ("footer.php");
+	printFooter ();
+?>

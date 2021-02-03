@@ -1,0 +1,5 @@
+<!-- PID:<HTpost:pid> -->
+<h4><HTpost:date> &#8212; <span class="headline"><HTpost:title></span></h4>
+<p class="newsitem">
+	<HTpost:post>
+</p>

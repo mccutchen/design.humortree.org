@@ -1,0 +1,90 @@
+#copyright {
+	font: 10px tahoma;
+	color: #ccc;
+	padding: 2px;
+}
+BODY, DIV, TABLE, TD, P, H1, H2, H3, UL, LI, BLOCKQUOTE {
+	/* let's get the "default" font established.  overkill, i know, but necessary for NS4 */
+	font-family: georgia, palatino, tahoma, verdana, sans-serif;
+	color: #333;
+}
+H1 {
+	font-size: 24px;
+	font-weight: normal;
+	color: #933;
+	text-align: center;
+}
+H3 {
+	font-size: 18px;
+	font-weight: normal;
+	color: #933;
+	text-align: center;
+}
+P {
+	line-height: 150%;
+	text-indent: 30px;
+	font-size: 14px;
+	text-align: left;
+}
+SPAN.opener {
+	font-size: 16px;
+	font-weight: bold;
+}
+LI {
+	font-size: 11px;
+	line-height: 150%;
+	margin-bottom: 5px;
+}
+UL {
+	text-align: left;
+}
+BLOCKQUOTE {
+	font-size: 11px;
+	line-height: 150%;
+	margin-bottom: 20px;
+	text-align: left;
+}
+.standalone {
+	margin: 20px 50px 40px 50px;
+}
+.quote {
+	font-size: 18px;
+}
+.attrib {
+	font: 11px tahoma, verdana, sans-serif;
+	font-weight: bold;
+	text-align: right;
+}
+.subattrib {
+	font-size: smaller;
+	font-weight: normal;
+}
+.date {
+	font-weight: bold;
+}
+TD.calender, TD.help {
+	font-size: smaller;
+}
+.inputText {
+	font: 12px georgia, palatino, tahoma, verdana, sans-serif;
+}
+.textArea {
+	width: 250px;
+	height: 150px;
+}
+#formContainer {
+	background-color: #eee;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+.headline {
+	color: #069;
+}
+.newsItem {
+	margin: 0px 30px;
+	text-indent: 0px;
+}
+H4 {
+	padding: 3px;
+	text-align: left;
+}

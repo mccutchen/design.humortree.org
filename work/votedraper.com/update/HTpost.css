@@ -1,0 +1,171 @@
+BODY {
+	background-color: #eee;
+	margin: auto, 0px;
+	padding: auto, 0px;
+	font: 11px tahoma, verdana, arial, sans-serif;
+	color: black;
+	text-align: center;
+}
+DIV {
+	text-align: left;
+}
+.header {
+	text-align: right;
+	padding: 10px;
+}
+H3 {
+	font: 22px georgia, serif;
+	color: white;
+	display: inline;
+}
+.setupHeadBG {
+	background-color: #eeeeee;
+	font: 10px tahoma, verdana, arial, sans-serif;
+	color: #333;
+}
+H1.setupHead {
+	font: 18px tahoma, verdana, arial, sans-serif;
+	color: #333;
+	display: inline;
+}
+H4.setupHead {
+	font: 11px tahoma, verdana, arial, sans-serif;
+	font-weight: bold;
+	color: #333;
+	display: inline;
+}
+.setupDescription {
+	text-align: left;
+	font: 10px tahoma, verdana, arial, sans-serif;
+	color: #333;
+}
+.setupOption {
+	text-align: left;
+	font: 11px tahoma, verdana, arial, sans-serif;
+	color: #333;
+}
+.compose {
+	background-color: #336699;
+	border-bottom: 2px solid #3399cc;
+}
+.edit {
+	background-color: #990000;
+	border-bottom: 2px solid #cc3300;
+}
+.admin {
+	background-color: #669966;
+	border-bottom: 2px solid #66cc66;
+}
+.login {
+	background-color: #ff3399;
+	border-bottom: 2px solid #ff99cc;
+}
+.setup {
+	background-color: #000000;
+	border-bottom: 2px solid #999999;
+}
+.navigation {
+	background-color: #369;
+	border-top: 2px solid #39c;
+	font: 11px georgia, serif;
+	color: white;
+	padding: 5px;
+}
+.left {
+	text-align: left;
+}
+.floatLeft {
+	float: left;
+	text-align: left;
+}
+.floatRight {
+	float: right;
+	text-align: left;
+}
+.clearRight {
+	clear: both;
+	text-align: right;
+}
+.clearLeft {
+	clear: both;
+	text-align: left;
+}
+.container {
+	border: 1px solid #ddd;
+	margin: 20px auto;
+	width: 433px;
+}
+.containerMain {
+	padding: 10px;
+	background-color: white;
+}
+.grayBar {
+	background-color: #ddd;
+	padding: 5px 10px;
+}
+TEXTAREA {
+	width: 250px;
+	height: 200px;
+	padding: 2px;
+}
+TEXTAREA.setupText {
+	width: 200px;
+	height: 100px;
+	padding: 2px;
+}
+.generalInput {
+	border: 1px solid #ddd;
+	background-color: #eee;
+	font: 11px tahoma, verdana, arial, sans-serif;
+	color: #333;
+	margin: 3px 0px;
+	padding-left: 2px;
+}
+.generalButton {
+	border: 2px solid #aaa;
+	background-color: #ccc;
+	font: 11px tahoma, verdana, arial, sans-serif;
+	font-weight: bold;
+	color: #333;
+	margin: 3px 0px;
+}
+.generalRadio {
+	margin-top: 3px;
+}
+.darkerInput {
+	border: 1px solid #bbb;
+	background-color: #fff;
+	font: 11px tahoma, verdana, arial, sans-serif;
+	color: #333;
+	margin: 3px 0px;
+	padding-left: 2px;
+}
+.darkerButton {
+	border: 2px solid #999;
+	background-color: #bbb;
+	font: 11px tahoma, verdana, arial, sans-serif;
+	font-weight: bold;
+	color: #333;
+	margin: 3px 0px;
+}
+.loginInput {
+	margin-right: 5px;
+}
+.inputWidthA {
+	width: 150px;
+}
+.inputWidthB {
+	width: 95%;
+}
+.inputWidthC {
+	width: 50px;
+}
+.inputWidthD {
+	width: 200px;
+}
+FORM {
+	display: inline;
+}
+.small {
+	font-size: 10px;
+}
