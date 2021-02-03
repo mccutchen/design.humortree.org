@@ -1,0 +1,12 @@
+@import "main-style.css";
+@import "text-replacements.css";
+
+/*------------------------------------------------------------------------------
+	IE 5.0 Windows stylesheet: Uses the IE5.0 Band Pass Filter to import a
+	stylesheet for IE 5.0 on Windows only.
+	
+	http://www.tantek.com/CSS/Examples/ie50winbandpass.html
+------------------------------------------------------------------------------*/
+@media tty {
+ i{content:"\";/*" "*/}}; @import 'ie50win.css'; {;}/*";}
+}/* */

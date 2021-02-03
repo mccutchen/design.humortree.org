@@ -1,0 +1,176 @@
+/*------------------------------------------------------------------------------
+	All of the image replacements below use the "LIR" image replacement
+	technique, developed by Seamus Leahy and Stuart Langridge:
+	
+	http://www.moronicbajebus.com/playground/cssplay/image-replacement/
+	http://www.kryogenix.org/code/browser/lir/
+------------------------------------------------------------------------------*/
+
+
+div#header h1 {
+	background-image: url("../img/school-logo.gif");
+	background-position: top center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	margin: 0px 0px 20px 0px;
+	padding: 27px 0px 0px 0px;
+    width: 100%;
+    
+    height: 0px !important;		/* Modern browsers */
+    height /**/:27px;			/* IE 5 & 5.5 hack */
+}
+
+
+div#main-content h2 {
+	padding: 24px 0px 0px 0px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+	background-position: top center;
+	margin: 40px 0px;
+	width: 100%;
+    
+    height: 0px !important;		/* Modern browsers */
+    height /**/:24px;			/* IE 5 & 5.5 hack */
+}
+div.supply-list h3,
+div#executive-board h3,
+div#faculty-and-staff-div h3 {
+	padding: 18px 0px 0px 0px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+	background-position: top center;
+	margin: 40px 0px;
+	width: 100%;
+    
+    height: 0px !important;		/* Modern browsers */
+    height /**/:18px;			/* IE 5 & 5.5 hack */
+}
+div#our-mission h2 {
+	background-image: url("../img/replacements/our-mission.gif");
+}
+div#contact-us h2 {
+	background-image: url("../img/replacements/contact-us.gif");
+}
+div#announcements h2 {
+	background-image: url("../img/replacements/announcements.gif");
+}
+div#who-are-we h2 {
+	background-image: url("../img/replacements/who-are-we.gif");
+}
+div#who-is-georgia-w-kimball h2 {
+	background-image: url("../img/replacements/who-is-georgia-w-kimball.gif");
+}
+div#a-word-from-the-principal h2 {
+	background-image: url("../img/replacements/a-word-from-the-principal.gif");
+}
+div#catch-corner h2 {
+	background-image: url("../img/replacements/catch-corner.gif");
+}
+div#parking-lot-rules h2 {
+	background-image: url("../img/replacements/parking-lot-rules.gif");
+}
+div#enrollment-information h2 {
+	background-image: url("../img/replacements/enrollment-information.gif");
+}
+div#medication-rules h2 {
+	background-image: url("../img/replacements/medication-rules.gif");
+}
+div#faculty-and-staff-div h2 {
+	background-image: url("../img/replacements/faculty-and-staff.gif");
+}
+div#faculty-and-staff-div h3 {
+	background-image: url("../img/replacements/2004-2005.gif");
+}
+div#what-is-the-pta h2 {
+	background-image: url("../img/replacements/what-is-the-pta.gif");
+}
+div#executive-board h2 {
+	background-image: url("../img/replacements/executive-board.gif");
+}
+div#executive-board h3 {
+	background-image: url("../img/replacements/2004-2005.gif");
+}
+div#school-supplies h2 {
+	background-image: url("../img/replacements/school-supplies.gif");
+}
+div#kimball-elementary-school-calendar h2 {
+	background-image: url("../img/replacements/kimball-elementary-school-calendar.gif");
+}
+div#mesquite-isd-calendar h2 {
+	background-image: url("../img/replacements/mesquite-isd-calendar.gif");
+}
+div#pams h2 {
+	background-image: url("../img/replacements/pams-lunchroom.gif");
+}
+div#kimball-elementary-school-cafeteria h2 {
+	background-image: url("../img/replacements/kimball-elementary-school-cafeteria.gif");
+}
+
+
+div#kindergarten h3 {
+	background-image: url("../img/replacements/kindergarten.gif");
+}
+div#first-grade h3 {
+	background-image: url("../img/replacements/first-grade.gif");
+}
+div#second-grade h3 {
+	background-image: url("../img/replacements/second-grade.gif");
+}
+div#third-grade h3 {
+	background-image: url("../img/replacements/third-grade.gif");
+}
+div#fourth-grade h3 {
+	background-image: url("../img/replacements/fourth-grade.gif");
+}
+div#fifth-grade h3 {
+	height: 18px;
+	background-image: url("../img/replacements/fifth-grade.gif");
+}
+div#sixth-grade h3 {
+	background-image: url("../img/replacements/sixth-grade.gif");
+}
+div.supply-list h3 {
+	margin: 20px 0px;
+}
+
+
+div#faculty-and-staff-div h3,
+div#executive-board h3 {
+	margin-top: -20px;
+}
+
+
+/* Principal's signature */
+p#signature {
+	float: right;
+	margin: 0px;
+	margin-bottom: 40px;
+	background-image: url("../img/signature.gif");
+	background-repeat: no-repeat;
+	width: 175px;
+	padding: 28px 0px 0px 0px;
+    overflow: hidden;
+    
+    height: 0px !important;		/* Modern browsers */
+    height /**/:28px;			/* IE 5 and 5.5 */
+}
+
+/* Enrollment list (who, where, when, how) */
+div#enrollment-information li#enrollment-who,
+div#enrollment-information li#enrollment-where,
+div#enrollment-information li#enrollment-when,
+div#enrollment-information li#enrollment-how {
+	background-position: 0px 5px;
+}
+div#enrollment-information li#enrollment-who {
+	background-image: url("../img/replacements/enrollment-who.gif");
+}
+div#enrollment-information li#enrollment-where {
+	background-image: url("../img/replacements/enrollment-where.gif");
+}
+div#enrollment-information li#enrollment-when {
+	background-image: url("../img/replacements/enrollment-when.gif");
+}
+div#enrollment-information li#enrollment-how {
+	background-image: url("../img/replacements/enrollment-how.gif");
+}

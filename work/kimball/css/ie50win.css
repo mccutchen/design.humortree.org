@@ -1,0 +1,23 @@
+/*------------------------------------------------------------------------------
+	Navigation
+------------------------------------------------------------------------------*/
+div#header ul {
+	list-style-type: none;
+	margin: 20px 0px 0px 50px !important;
+	padding: 0px !important;
+	height: 1px;
+}
+div#header li {
+	display: block !important;
+	float: left;
+	font: 11px georgia, serif;
+	padding: 0px 10px;
+	margin: 0px;
+	border-right: 1px solid #666;
+	background: none;
+}
+
+
+div#main-content {
+	margin-top: 40px !important;
+}

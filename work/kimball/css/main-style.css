@@ -1,0 +1,500 @@
+/*------------------------------------------------------------------------------
+	Global styles
+------------------------------------------------------------------------------*/
+body {
+	/*
+		Background image by Travis Beckham, at Squidfingers.com.
+		He has created a wealth of beautiful patterns that are
+		free to use:
+		
+		http://squidfingers.com/patterns/
+	*/
+	background: url("../img/backgrounds/big-background.gif");
+	background-position: top center;
+	margin: 0px;
+	padding: 0px;
+	
+	color: #333;
+	font-family: georgia, serif;
+	font-size: 12px;
+	
+	text-align: center;	/* center the main container in IE */
+}
+p {
+	text-align: left;
+	line-height: 150%;
+}
+a img {
+	border: none;
+}
+a, a:link {
+	color: #f60;
+}
+a:visited {
+	color: #666;
+}
+a:hover {
+	color: #c30;
+}
+div.back-to-top {
+	clear: both;
+	text-align: right;
+	margin: 20px;
+}
+div.back-to-top a {
+	padding-right: 13px;
+	background-image: url("../img/up-arrow.gif");
+	background-repeat: no-repeat;
+	background-position: center right;
+	font: 10px verdana, sans-serif;
+	text-decoration: none;
+	display: block;
+}
+ul {
+	list-style-type: none;
+}
+ul li {
+	font: 11px georgia, serif;
+	background-image: url("../img/bullet.gif");
+	background-position: 0px 5px;
+	background-repeat: no-repeat;
+	padding-left: 15px;
+	text-align: left;
+	margin-bottom: 5px;
+}
+address {
+	font-style: normal;
+}
+
+span.inset {
+	display: block;
+	float: left;
+	padding: 10px;
+	margin: 10px 10px 10px 0;
+	border-right: 1px solid #ccc;
+}
+
+/*------------------------------------------------------------------------------
+	Main container
+------------------------------------------------------------------------------*/
+div#main-container {
+	width: 700px;
+	height: 100%;
+	padding: 40px 0px 0px 0px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+
+/*------------------------------------------------------------------------------
+	Header
+------------------------------------------------------------------------------*/
+div#header {
+	text-align: center;
+}
+
+
+
+/*------------------------------------------------------------------------------
+	Navigation
+------------------------------------------------------------------------------*/
+div#header ul {
+	list-style-type: none;
+	margin: 20px 0px !important;
+	padding: 0px !important;
+}
+div#header li {
+	display: inline;
+	font: 11px georgia, serif;
+	padding: 0px 10px;
+	margin: 0px;
+	border-right: 1px solid #666;
+	background: none;
+}
+div#header  li.last-item {
+	border-right: none;
+}
+
+div#header a, div#header a:link {
+	color: black;
+	text-decoration: none;
+}
+div#header a:hover {
+	color: #f60;
+}
+div#header a.current, div#header a.current:hover {
+	font-style: italic;
+	color: #333;
+	text-decoration: none;
+}
+
+
+
+/*------------------------------------------------------------------------------
+	Main content
+------------------------------------------------------------------------------*/
+div#main-content {
+	border-top: 1px solid #ddd;
+	width: 580px;
+	margin: 40px auto 40px auto;
+	padding: 0px 20px;
+	text-align: left;
+}
+div#main-content div {
+	margin-bottom: 40px;
+}
+
+
+/*------------------------------------------------------------------------------
+	Footer
+------------------------------------------------------------------------------*/
+div#footer {
+	font: 10px verdana, sans-serif;
+	background-color: #eee;
+	background-image: url("../img/backgrounds/copyright-background.gif");
+	padding: 15px 10px;
+	margin: 0px 5px;
+}
+div#footer a, div#footer a:link {
+	color: black;
+}
+
+
+
+/*------------------------------------------------------------------------------
+	Home page
+------------------------------------------------------------------------------*/
+body#home-page div#main-content {
+	background-image: url("../img/backgrounds/home-page-divider.gif");
+	background-position: top center;
+	background-repeat: repeat-y;
+}
+
+div#announcements {
+	float: right;
+	clear: right;
+	margin: 0px;
+	padding: 0px;
+	width: 45%;
+}
+p.announcement {
+	text-indent: 14px;
+	background-image: url("../img/bullet.gif");
+	background-repeat: no-repeat;
+	background-position: 0px 4px;
+}
+p.announcement img {
+	display: block;
+	padding: 10px 0px;
+}
+
+div#our-mission, div#contact-us {
+	margin-right: 55%;
+	padding: 0px;
+	clear: none !important;
+}
+div#contact-us ul {
+	margin: 20px 0px;
+	padding: 0px;
+}
+div#contact-us li {
+	background: none;
+	padding: 0px;
+}
+div#contact-us td {
+	padding-top: 20px;
+}
+div#contact-us dl {
+	margin: 0;
+	margin-left: 10px;
+}
+div#contact-us dt, div#contact-us dd {
+	margin: 5px 0;
+	padding: 0;
+}
+div#contact-us dd {
+	font-size: 11px;
+	font-style: italic;
+}
+div#contact-us dd a {
+	font-style: normal;
+}
+
+
+div#mesquite-logo {
+	margin: 40px 0px;
+	clear: both !important;
+}
+div#mesquite-logo img {
+	display: block;
+	margin: auto;
+}
+
+
+
+/*------------------------------------------------------------------------------
+	About Kimball
+------------------------------------------------------------------------------*/
+div#our-mission {
+	margin-bottom: 40px;
+}
+
+div#who-is-georgia-w-kimball div {
+	margin-right: 55%;
+	padding: 0px;
+	text-align: center;
+}
+div#who-is-georgia-w-kimball p {
+	padding-left: 50%;
+	background-image: url("../img/georgia-w-kimball-photo.jpg");
+	background-position: 50px 0px;
+	background-repeat: no-repeat;
+	height: 207px;
+}
+
+
+
+/*------------------------------------------------------------------------------
+	Essential Information
+------------------------------------------------------------------------------*/
+div#parking-lot-rules p.with-summary {
+	padding-right: 210px;
+	background-image: url("../img/parking-lot-rules-summary.gif");
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+div#enrollment-information ol {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+div#enrollment-information li {
+	padding-left: 90px;
+	background-repeat: no-repeat;
+	background-position: center left;
+	margin-bottom: 20px;
+}
+div#enrollment-information li ol {
+	list-style-type: upper-alpha;
+	margin: 20px 0px 0px 60px;
+}
+div#enrollment-information li ol li {
+	padding-left: 0px;
+	margin-bottom: 10px;
+}
+div#medication-rules em {
+	font-weight: bold;
+}
+
+
+
+/*------------------------------------------------------------------------------
+	Faculty & Staff
+------------------------------------------------------------------------------*/
+table#faculty-and-staff-table {
+	text-align: left;
+	font: 10px verdana, sans-serif;
+	width: 100%;
+	margin-top: 20px;
+}
+table#faculty-and-staff-table th, table#faculty-and-staff-table td {
+	padding: 5px 10px;
+	vertical-align: top;
+}
+table#faculty-and-staff-table th {
+	border-right: 1px solid #eee;
+	text-align: right;
+}
+table#faculty-and-staff-table tr.colored td {
+	background-color: #f5f5f5;
+}
+
+
+
+/*------------------------------------------------------------------------------
+	PTA
+------------------------------------------------------------------------------*/
+div#pta-meetings {
+	width: 225px;
+	float: right;
+	margin: 10px;
+	font: 10px verdana, sans-serif;
+}
+div#pta-meetings table {
+	color: #fff;
+	border: 1px solid #c30;
+	margin: 0px;
+}
+div#pta-meetings th {
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 0px;
+	background-color: #c30;
+}
+div#pta-meetings td {
+	vertical-align: top;
+	padding: 5px;
+	background-color: #f60;
+}
+div#pta-meetings td.date {
+	font-weight: bold;
+}
+div#pta-meetings p {
+	color: #c30;
+	font-style: italic;
+	margin: 5px 0px;
+	text-align: center;
+}
+
+
+div#executive-board p {
+	clear: both;
+}
+div#executive-board table {
+	width: 49%;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 20px;
+}
+div#executive-board table.first-table {
+	float: left;
+}
+div#executive-board table.second-table {
+	float: right;
+}
+div#executive-board table th {
+	font: 10px verdana, sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 5px;
+}
+div#executive-board table td {
+	font-size: 11px;
+	padding-left: 5px;
+}
+
+div#school-supplies div.supply-list {
+	width: 49%;
+	float: left;
+	clear: none !important;
+}
+div#sixth-grade {
+	clear: both !important;
+	float: none !important;
+	width: 100% !important;
+	padding: 0px;
+}
+div#sixth-grade h3 {
+	clear: both !important;
+}
+div#sixth-grade ul {
+	width: 70%;
+	margin-left: 25%;
+}
+div.supply-list p {
+	text-align: center;
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+
+/*------------------------------------------------------------------------------
+	Calendars
+------------------------------------------------------------------------------*/
+body#calendars div#main-content {
+	margin-bottom: 15%;
+}
+table.calendar {
+	/*background-color: #ddd;*/
+	text-align: center;
+	margin: 0px auto;
+}
+div#kimball-elementary-school-calendar h3 {
+	color: #333;
+	font: 24px georgia;
+	text-align: center;
+	margin-bottom: 20px;
+}
+table.calendar th {
+	color: #666;
+	background-color: #fff;
+	font-weight: normal;
+	font-style: italic;
+}
+table.calendar td {
+	padding: 10px;
+	text-align: right;
+	vertical-align: top;
+	color: #ccc;
+	font: 18px georgia;
+	background-color: #f1f1f1;
+}
+
+table.calendar p {
+	font: 11px verdana;
+	text-align: left;
+}
+
+table.calendar td.full {
+	font-size: 24px;
+	background-color: #fff;
+	color: #c60;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-bottom: 2px solid #ccc;
+	border-right: 2px solid #ccc;
+}
+table.calendar td.full p {
+	color: #333;
+	margin: 15px 0px 0px 0px;
+}
+
+table.calendar td.empty {
+	background-color: #fff;
+}
+p#misd-calendar-link {
+	height: 49px;
+	padding-left: 55px;
+	background-image: url("../img/pdf-icon.gif");
+	background-repeat: no-repeat;
+	background-position: center left;
+}
+p#misd-calendar-link a {
+	display: block;
+}
+
+
+
+/*------------------------------------------------------------------------------
+	Cafeteria
+------------------------------------------------------------------------------*/
+table#lunch-prices {
+	text-align: left;
+	font: 10px verdana, sans-serif;
+	width: 100%;
+}
+table#lunch-prices th, table#lunch-prices td {
+	padding: 5px 10px;
+	vertical-align: middle;
+}
+table#lunch-prices tr.colored td, table#lunch-prices tr.colored th {
+	background-color: #f5f5f5;
+}
+table#lunch-prices td.asterisk {
+	text-align: center;
+}
+
+div#pams p a {
+	float: right;
+	margin: 10px;
+}
+
+
+
+
+
+div.disclaimer {
+	display: none;
+}

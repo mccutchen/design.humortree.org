@@ -1,0 +1,49 @@
+/*------------------------------------------------------------------------------
+	IE5/Mac stylesheet: Uses the IE5/Mac Band Pass Filter to import a
+	stylesheet for IE5/Mac only.
+	
+	http://www.stopdesign.com/examples/ie5mac-bpf/
+------------------------------------------------------------------------------*/
+/*\*//*/
+@import "ie5mac.css"; /* A hack to import a stylesheet for IE5/Mac only
+/**/
+
+
+
+/*------------------------------------------------------------------------------
+	Home page
+------------------------------------------------------------------------------*/
+body#home-page div#main-content {
+	position: relative;
+}
+div#announcements {
+	float: none !important;
+	position: absolute;
+	top: 0px;
+	left: 55%;
+	width: 45%;
+}
+div#our-mission, div#contact-us {
+	margin-right: 55%;
+}
+
+
+
+/*------------------------------------------------------------------------------
+	PTA
+------------------------------------------------------------------------------*/
+div#board-table-div {
+	position: relative;
+}
+div#board-table-div table {
+	float: none !important;
+}
+div#board-table-div table.second-table {
+	position: absolute;
+	top: 0px;
+	left: 55%;
+	width: 45%;
+}
+div#board-table-div table.first-table {
+	margin-right: 55%;
+}
