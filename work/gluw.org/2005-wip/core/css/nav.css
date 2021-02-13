@@ -1,0 +1,74 @@
+div#nav {
+	border-top: 1px solid #B02700;
+	border-right: 1px solid #B02700;
+	margin: 0px;
+	padding: 0px;
+	height: 32px;
+	background: #004489 url(../img/nav/bg.gif) bottom repeat-x;
+}
+div#nav ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+div#nav ul li {
+	display: block;
+	float: left;
+}
+div#nav a {
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	width: 111px;
+	height: 32px;
+	text-indent: -100em;
+	overflow: hidden;
+}
+/* Normal states */
+div#nav a.who { background: url(../img/nav/who-off.gif) no-repeat; }
+div#nav a.what { background: url(../img/nav/what-off.gif) no-repeat; }
+div#nav a.learn { background: url(../img/nav/learn-off.gif) no-repeat; }
+
+/* Hover states */
+div#nav a.who:hover { background: url(../img/nav/who-on.gif) no-repeat; }
+div#nav a.what:hover { background: url(../img/nav/what-on.gif) no-repeat; }
+div#nav a.learn:hover { background: url(../img/nav/learn-on.gif) no-repeat; }
+
+div#nav .who-selected { background: url(../img/nav/who-selected.gif) no-repeat; }
+div#nav .what-selected { background: url(../img/nav/what-selected.gif) no-repeat; }
+div#nav .learn-selected { background: url(../img/nav/learn-selected.gif) no-repeat; }
+
+div#subnav {
+	background-color: #F8B53B;
+	border-bottom: 1px solid #ED5327;
+	border-right: 1px solid #ED5327;
+	font: 11px verdana;
+	margin: 0px;
+	margin-bottom: 40px;
+	padding: 7px 20px;
+}
+div#subnav ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	clear: left;
+}
+div#subnav ul li {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	padding-right: 15px;
+	margin-right: 15px;
+	border-right: 1px solid #FDCC72;
+}
+div#subnav a {
+	color: #CF3002;
+	text-decoration: none;
+}
+div#subnav a:hover {
+	color: #fff;
+}
+div#subnav a.selected {
+	color: #CF3002;
+	font-style: italic;
+}

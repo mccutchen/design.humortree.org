@@ -1,0 +1,13 @@
+table#tableWhere {
+	width: 100%;
+}
+table#tableWhere td, table#tableWhere th {
+	font-size: 11px;
+	padding: 3px 0px 3px 5px;
+}
+table#tableWhere th {
+	text-align: right;
+}
+table#tableWhere tr.odd td, table#tableWhere tr.odd th {
+	background-color: #eee;
+} 

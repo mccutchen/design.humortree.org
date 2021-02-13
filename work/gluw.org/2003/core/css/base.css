@@ -1,0 +1,475 @@
+body {
+	background-color: #ccc;
+	color: #333;
+	font: 12px georgia;
+	margin: 0px;
+	padding: 0px;
+}
+
+a img {
+	border: none;
+}
+
+
+div#document {
+	background-color: #fff;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+	margin: 50px 0px;
+	padding: 20px 5%;
+}
+
+
+
+div#leftColumn {
+	float: left;
+	width: 250px;
+}
+
+
+div#header {
+	background-color: #fff;
+	border-bottom: 1px solid #333;
+	margin: 0px;
+}
+div#header h1 {
+	height: 187px;
+	width: 250px;
+	margin: 0px;
+	padding: 0px;
+	background: transparent url(../gif/logo.gif) no-repeat 10px 0px;
+}
+div#header h1 span {
+	display: none;
+}
+
+
+
+div#nav {
+	border-top: 1px solid #ccc;
+	padding-top: 20px;
+}
+div#nav ul {
+	list-style-type: none;
+	margin: 0px;
+	margin-left: 20px;
+	padding: 0px;
+}
+div#nav ul li {
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+div#nav ul li ul {
+	margin-top: 5px;
+	margin-left: 20px;
+	border-left: 1px solid #ccc;
+	padding: 0px;
+}
+div#nav ul li ul li {
+	font-weight: normal;
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+}
+div#nav a, div#nav span {
+	display: block;
+	padding: 3px 5px;
+	padding-left: 20px;
+	border-left: 4px solid #fff;
+	text-decoration: none;
+	margin: 0px;
+}
+div#nav a:hover {
+	border-left-color: #ccc;
+	background-color: #eee;
+}
+div#nav span {
+	font-style: italic;
+	font-weight: bold;
+}
+div#nav a.selected:hover {
+	font-style: normal;
+}
+
+
+
+div#content {
+	margin-left: 300px;
+}
+div#content h1 {
+	font: 32px "trebuchet ms",helvetica,georgia;
+	font-weight: normal;
+	font-style: italic;
+	margin-bottom: 40px;
+}
+div#content h2 {
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 1px solid #ccc;
+}
+
+div#content p {
+	line-height: 175%;
+}
+div#content blockquote, div#content .emphasize {
+	margin: 0px;
+	padding: 20px 30px;
+	background-color: #f8f8f8;
+	border-left: 1px solid #ccc;
+}
+div#content blockquote p {
+	margin: 0px;
+	padding: 0px;
+	line-height: 100%;
+}
+div#content blockquote ul {
+	margin-bottom: 0px;
+}
+
+div#content p.fineprint {
+	font: 10px verdana;
+	color: #666;
+}
+
+div#content a, div#footer a {
+	color: #900;
+	text-decoration: none;
+	border-bottom: 1px solid #ccc;
+}
+div#content a:hover, div#footer a:hover {
+	background-color: #f8f8f8;
+	border-bottom-color: #333;
+}
+div#content p.backToTop {
+	font: 10px verdana;
+}
+div#content p.backToTop a {
+	padding-left: 13px;
+	background: transparent url(../gif/up.gif) no-repeat 1px 6px;
+}
+div#content .clear { clear: both; }
+
+div#content ul {
+	list-style-type: none;
+	margin: 10px 0px 10px 20px;
+	padding: 0px;
+}
+div#content ul li {
+	padding-left: 15px;
+	background: transparent url(../gif/bullet.gif) no-repeat 0px 4px;
+}
+
+
+
+div#footer {
+	text-align: right;
+	font: 10px verdana;
+	color: #999;
+	margin-top: 60px;
+	clear: both;
+}
+
+
+
+
+/*------------------------------------------------------------------------------
+	Section-specific styles
+------------------------------------------------------------------------------*/
+
+/* Agencies */
+div#agenciesList {
+	margin-top: 40px;
+	padding-top: 20px;
+	border-top: 1px solid #ccc;
+}
+div#agenciesList ol {
+	list-style-type: decimal;
+}
+div#agenciesList ol li {
+	padding: 3px 0px;
+}
+
+div#content div.agency {
+	margin-left: 20px;
+	margin-bottom: 40px;
+}
+div#content div.agency h2 {
+	margin-left: -20px;
+}
+
+div#content div.agency ul {
+	list-style-type: none;
+	display: block;
+	margin: 10px 0px;
+	padding: 10px 20px;
+	border-left: 1px solid #ccc;
+	background-color: #f8f8f8;
+}
+div#content div.agency ul li {
+	font-size: 11px;
+	padding: 3px 0px;
+	background: none;
+}
+div#content div.agency ul li a, div#content div.agency ul li strong {
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+div#agenciesNav {
+	text-align: center;
+	font-size: 11px;
+}
+div#agenciesNav span {
+	margin: 0px 10px;
+}
+
+
+/* Allocations */
+table#allocationsTable th, table#allocationsTable td {
+	font: 11px verdana;
+	padding: 5px 10px;
+}
+table#allocationsTable tr.odd th, table#allocationsTable tr.odd td {
+	background-color: #f5f5f5;
+}
+table#allocationsTable th {
+	font-weight: normal;
+	text-align: left;
+	padding-right: 40px;
+	border-right: 1px solid #ddd;
+}
+table#allocationsTable td {
+	font-weight: bold;
+	text-align: right;
+}
+
+
+/* Board of Directors */
+div#content div.boardList, div#content div.executiveList {
+	float: left;
+	width: 175px;
+	margin-bottom: 20px;
+}
+div#content div.boardList ul, div#content div.executiveList ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+div#content div.boardList ul li, div#content div.executiveList ul li {
+	margin: 0px;
+	padding: 0px;
+	background: none;
+}
+div#content div.boardList ul li {
+	font-size: 11px;
+	margin-bottom: 10px;
+}
+div#content div.boardList ul li ul li {
+	font: 10px verdana;
+	font-style: italic;
+	margin: 0px;
+}
+
+div#content div.executiveList ul li {
+	font-size: 11px;
+	font-weight: bold;
+	background: none;
+	margin-bottom: 20px;
+}
+div#content div.executiveList ul li ul li {
+	font-size: 12px;
+	font-weight: normal;
+	padding-left: 1em;
+	margin: 0px;
+}
+
+
+/* Campaign */
+div#content ul.pacesetters {
+	/* background: transparent url(../gif/campaignLogo.gif) no-repeat right; */
+}
+img#celebration {
+	display: block;
+	margin-bottom: 30px;
+}
+
+/* Staff */
+div#content ul.staffList {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 40px;
+}
+div#content ul.staffList li {
+	font-size: 11px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	background: none;
+}
+div#content ul.staffList li ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 15px;
+}
+div#content ul.staffList li ul li {
+	font-size: 12px !important;
+	font-weight: normal !important;
+	margin: 0px;
+	padding: 0px;
+	background: none;
+}
+
+
+/* Referral */
+div#content h3 {
+	font-size: 24px;
+	font-weight: normal;
+	text-align: center;
+	border-left: 1px solid #ccc;
+	background-color: #f8f8f8;
+	padding: 10px;
+}
+
+
+/* FAQ */
+div#content ol.questionsList {
+	margin-bottom: 60px;
+}
+div#content ol.questionsList li {
+	font-size: 11px;
+	margin-bottom: 10px;
+}
+div#content ol.answersList li {
+	margin-bottom: 40px;
+}
+div#content ol.answersList li p.question {
+	font-weight: bold;
+}
+
+
+/* Contact */
+div#content ul.contactList {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 20px;
+}
+div#content ul.contactList li {
+	background: none;
+}
+
+
+
+/* Report */
+div#content.report {
+	margin-right: 220px;
+}
+div#content.report h2 {
+	font: 24px "trebuchet ms", verdana;
+	color: #666;
+	margin-top: 40px;
+}
+
+div#content.report ul li {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background: transparent url(../gif/bullet.gif) no-repeat 0px 7px;
+}
+div#content.report ul li span {
+	font-size: 11px;
+	font-style: italic;
+}
+
+div#content.report ul#successList {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+div#content.report ul#successList li {
+	margin: 0px;
+	padding: 20px;
+	line-height: 175%;
+	background: none;
+}
+div#content.report ul#successList li.even {
+	background-color: #f5f5f5;
+}
+
+
+div#content.report ul#steeringList li {
+	background: none;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+}
+div#content.report ul#steeringList li ul li {
+	font-weight: normal;
+	padding-left: 15px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background: transparent url(../gif/bullet.gif) no-repeat 0px 7px;
+}
+div#content.report ul#steeringList li ul li span {
+	font-size: 11px;
+	font-style: italic;
+}
+
+div#content.report img.headshot {
+	float: left;
+	border: 1px solid #333;
+	display: block;
+	padding: 0px;
+	margin: 10px;
+	margin-left: 0px;
+}
+div#content.report p.signature {
+	margin-top: 40px;
+	font-size: 24px;
+	font-style: italic;
+	text-align: right;
+}
+
+div#content.report table#awardWinningTable th {
+	font-size: 12px;
+	text-align: left;
+}
+div#content.report table#awardWinningTable th em {
+	font-weight: normal;
+	font-size: 11px;
+}
+div#content.report table#awardWinningTable td {
+	font-size: 12px;
+	text-align: left;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	line-height: 175%;
+}
+
+div#toc, div#campaignToc {
+	float: right;
+	width: 180px;
+	font: 11px verdana;
+	border: 1px solid #ccc;
+	background-color: #eee;
+	margin: 0px;
+	margin-top: 100px;
+}
+div#campaignToc {
+	margin-top: 0px;
+	width: 220px;
+}
+div#toc h2, div#campaignToc h2 {
+	font: 18px "trebuchet ms", verdana;
+	margin: 0px;
+	margin-bottom: 10px;
+	padding: 5px 10px;
+	border-bottom: 1px solid #ccc;
+	background: #ccc;
+}
+div#toc ol, div#campaignToc ol {
+	list-style-type: lower-roman;
+}
+div#toc li, div#campaignToc li {
+	padding: 3px 5px;
+}

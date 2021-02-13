@@ -1,0 +1,32 @@
+td#content blockquote {
+	font: 24px georgia, palatino;
+	color: #c60;
+	background-color: transparent;
+	border: none;
+}
+
+table#volunteers {
+	width: 100%;
+}
+table#volunteers td {
+	text-align: center;
+	vertical-align: top;
+	padding: 5px 5px 10px 5px;
+}
+
+table#volunteers th {
+	padding: 20px 0px 5px 0px;
+	border-bottom: 1px solid #ccc;
+}
+table#volunteers tr.header td {
+	vertical-align: middle;
+	background-color: #eee;
+	border-bottom: 1px dashed #ccc;
+	padding: 5px;
+	font-weight: bold;
+}
+
+div#campaignLogo {
+	margin-top: 30px;
+	text-align: center;
+}

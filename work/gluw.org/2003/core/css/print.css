@@ -1,0 +1,227 @@
+* {
+	color: #000 !important;
+	background-color: #fff  !important;
+	width: auto !important;
+}
+
+body {
+	font-size: inherit !important;
+	font-family: georgia !important;
+	margin: 4em 0em !important;
+	padding: 0px !important;
+}
+
+div#document {
+	margin: 0px !important;
+	padding: 0px !important;
+}
+
+div#leftColumn {
+	float: none !important;
+}
+
+div#header h1 {
+	font: 32px georgia !important;
+	font-weight: normal !important;
+	text-align: center;
+}
+
+div#nav {
+	display: none !important;
+}
+
+div#content {
+	margin: 0px !important;
+}
+div#content .clear { clear: both; }
+div#content blockquote, div#content .emphasize {
+	margin: 0px !important;
+	padding: 5px 40px !important;
+	border-left: 1px solid #000 !important;
+}
+
+div#content h1 {
+	font-size: 32px !important;
+	text-align: left;
+	margin-top: 50px;
+}
+
+
+
+/*------------------------------------------------------------------------------
+	Section-specific styles
+------------------------------------------------------------------------------*/
+
+/* Agencies */
+div#agenciesList {
+	margin-top: 40px;
+	padding-top: 20px;
+	border-top: 1px solid #ccc;
+}
+div#agenciesList ol {
+	list-style-type: decimal;
+}
+div#agenciesList ol li {
+	padding: 3px 0px;
+}
+
+div#content div.agency {
+	margin-left: 20px;
+	margin-bottom: 40px;
+}
+div#content div.agency h2 {
+	margin-left: -20px;
+}
+
+div#content div.agency ul {
+	list-style-type: none;
+	display: block;
+	margin: 10px 0px;
+	padding: 10px 20px;
+	border-left: 1px solid #ccc;
+	background-color: #f8f8f8;
+}
+div#content div.agency ul li {
+	font-size: 11px;
+	padding: 3px 0px;
+	background: none;
+}
+div#content div.agency ul li a, div#content div.agency ul li strong {
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+div#agenciesNav {
+	text-align: center;
+	font-size: 11px;
+}
+div#agenciesNav span {
+	margin: 0px 10px;
+}
+
+
+/* Allocations */
+table#allocationsTable th, table#allocationsTable td {
+	font: 11px verdana;
+	padding: 5px 10px;
+}
+table#allocationsTable tr.odd th, table#allocationsTable tr.odd td {
+	background-color: #f5f5f5;
+}
+table#allocationsTable th {
+	font-weight: normal;
+	text-align: left;
+	padding-right: 40px;
+}
+table#allocationsTable td {
+	font-weight: bold;
+	text-align: right;
+}
+
+
+/* Board of Directors */
+div#content div.boardList, div#content div.executiveList {
+	float: left;
+	width: 200px;
+	margin-bottom: 20px;
+}
+div#content div.boardList ul, div#content div.executiveList ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+div#content div.boardList ul li, div#content div.executiveList ul li {
+	margin: 0px;
+	padding: 0px;
+	background: none;
+}
+div#content div.boardList ul li {
+	font-size: 11px;
+	margin-bottom: 10px;
+}
+div#content div.boardList ul li ul li {
+	font: 10px verdana;
+	font-style: italic;
+	margin: 0px;
+}
+
+div#content div.executiveList ul li {
+	font-size: 11px;
+	font-weight: bold;
+	background: none;
+	margin-bottom: 20px;
+}
+div#content div.executiveList ul li ul li {
+	font-size: 12px;
+	font-weight: normal;
+	padding-left: 1em;
+	margin: 0px;
+}
+
+
+
+/* Staff */
+div#content ul.staffList {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 40px;
+}
+div#content ul.staffList li {
+	font-size: 11px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	background: none;
+}
+div#content ul.staffList li ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 15px;
+}
+div#content ul.staffList li ul li {
+	font-size: 12px !important;
+	font-weight: normal !important;
+	margin: 0px;
+	padding: 0px;
+	background: none;
+}
+
+
+/* Referral */
+div#content h3 {
+	font-size: 24px;
+	font-weight: normal;
+	text-align: center;
+	border-left: 1px solid #ccc;
+	background-color: #f8f8f8;
+	padding: 10px;
+}
+
+
+/* FAQ */
+div#content ol.questionsList {
+	margin-bottom: 60px;
+}
+div#content ol.questionsList li {
+	font-size: 11px;
+	margin-bottom: 10px;
+}
+div#content ol.answersList li {
+	margin-bottom: 40px;
+}
+div#content ol.answersList li p.question {
+	font-weight: bold;
+}
+
+
+/* Contact */
+div#content ul.contactList {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 20px;
+}
+div#content ul.contactList li {
+	background: none;
+}

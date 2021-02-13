@@ -1,0 +1,11 @@
+td#content div {
+	margin-left: 15px;
+	margin-bottom: 20px;
+}
+td#content h4 {
+	margin-bottom: 20px;
+}
+
+td#content div strong {
+	font-size: 11px;
+}

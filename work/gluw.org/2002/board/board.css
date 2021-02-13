@@ -1,0 +1,29 @@
+td#content table td {
+	vertical-align: top;
+	text-align: left;
+	padding: 20px 10px;
+}
+
+table#executiveCommittee td div {
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+
+table#executiveCommittee td div strong {
+	font-size: 11px;
+}
+
+table#executiveCommittee td div div {
+	margin-left: 15px;
+}
+
+td#content em {
+	display: block;
+	font: 10px verdana;
+	font-style: italic;
+}
+
+table#board td div {
+	font: 11px georgia;
+	margin-bottom: 15px;
+}

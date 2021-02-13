@@ -1,0 +1,9 @@
+td#content ul#numbers {
+	list-style-type: none;
+	margin-left: 20px;
+}
+td#content ul#numbers li {
+	font-size: 18px;
+	padding-top: 10px;
+	color: #c60;
+}

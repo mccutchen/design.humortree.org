@@ -1,0 +1,72 @@
+div#content {
+	margin-left: 20px;
+	margin-right: 20px;
+    margin-bottom: 40px;
+	font-size: 14px;
+	line-height: 175%;
+}
+
+div#content h1 {
+	margin: 0px;
+	padding: 0px;
+	height: 45px;
+	overflow: hidden;
+	text-indent: -100em;
+}
+/* Replacement images */
+div#content h1.about-us { background: url(../img/h1/about-us.gif) top left no-repeat; width: 140px; }
+
+div#content h2 {
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 1px solid #ccc;
+}
+div#content blockquote, div#content .emphasize {
+	margin: 0px;
+	padding: 20px 30px;
+	background-color: #f8f8f8;
+	border-left: 1px solid #ccc;
+}
+div#content blockquote p {
+	margin: 0px;
+	padding: 0px;
+	line-height: 100%;
+}
+div#content blockquote ul {
+	margin-bottom: 0px;
+}
+
+div#content p.fineprint {
+	font: 10px verdana;
+	color: #666;
+}
+
+div#content a {
+	color: #ED5327;
+	text-decoration: none;
+	border-bottom: 1px solid #F8B53B;
+}
+div#content a:hover {
+	color: #48609D;
+}
+div#content a:visited {
+	color: #000;
+}
+div#content p.backToTop {
+	font: 10px verdana;
+}
+div#content p.backToTop a {
+	padding-left: 13px;
+	background: transparent url(/core/png/up.png) no-repeat 1px 6px;
+}
+div#content .clear { clear: both; }
+
+div#content ul {
+	list-style-type: none;
+	margin: 10px 0px 10px 20px;
+	padding: 0px;
+}
+div#content ul li {
+	padding-left: 15px;
+	background: transparent url(/core/png/bullet.png) no-repeat 0px 4px;
+}

@@ -1,0 +1,50 @@
+.navigation {
+	font: 11px/18px verdana, arial, helvetica, sans-serif;
+	color: #ff6600;
+}
+.headline {
+	font: 12px georgia, serif;
+	font-weight: bold;
+	color: black;
+}
+.serif {
+	font: 12px georgia;
+}
+.dateline {
+	font: 11px georgia, serif;
+}
+.story {
+	font: 11px/14px verdana, arial, helvetica, sans-serif;
+}
+.bodytext {
+	font: 11px/16px verdana, arial, sans-serif;
+}
+.onepx {
+	font-size: 1px;
+}
+a:link,a:visited {
+	color: black;
+	background-color: #fff;
+	text-decoration: none;
+}
+a:hover, a:active {
+	color: #ff6600;
+	background-color: #eee;
+	text-decoration: none;
+}
+a.bodylink:link,a.bodylink:visited {
+	color: #ff6600;
+	text-decoration: none;
+}
+a.bodylink:hover,a.bodylink:active {
+	color: #ff6600;
+	text-decoration: underline;
+}
+.extralarge {
+	font: 18px georgia, serif;
+	font-weight: bold;
+	color: #ff6600;
+}
+.smaller {
+	font-size: 10px;
+}

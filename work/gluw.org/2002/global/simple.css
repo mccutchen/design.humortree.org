@@ -1,0 +1,253 @@
+/* font overkill */
+body, div, td, li {
+	font-family: georgia, palatino, serif;
+	font-size: 12px;
+}
+
+/* GOD DAMN NETSCAPE 4
+	this is just here so that this site will show up *similar* in NS4.
+	that's also why there is a table being used as a layout tool.
+	GRRRRRR!
+*/
+td {
+	background-color: #fff;
+}
+/* Hell. */
+
+a, a:link, a:visited {
+	color: #c00;
+	border-bottom: 1px dashed #ccc;
+	text-decoration: none;
+}
+a:hover, a:active {
+	color: #000;
+	border-color: #000;
+}
+
+
+body {
+	margin: 50px 0px;
+}
+td {
+	vertical-align: top;
+}
+div#container {
+	background-color: #fff;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	padding: 10px;
+	text-align: center;
+}
+table#layout {
+	width: 750px;
+	margin: auto;
+}
+td#navigation {
+	font: 12px georgia, sans-serif;
+	text-align: center;
+	width: 300px;
+}
+td#content {
+	font-family: georgia;
+	color: #333;
+	padding: 20px 30px 20px 40px;
+	text-align: left;
+	vertical-align: top;
+}
+
+td#content td {
+	color: #333;
+}
+
+div#logos {
+	margin-top: 10px;
+}
+img#logoUnderline {
+	margin: 25px 0px 30px 0px;
+	padding: 0px;
+	display: block;
+	width: 300px;
+	height: 2px;
+}
+
+
+table#navTable {
+	margin: auto;
+}
+tr.navSection {
+	font-size: 12px;
+}
+td.navSpacer {
+	height: 20px;
+}
+tr.navSection th {
+	text-align: right;
+	vertical-align: top;
+	font-weight: bold;
+	padding-right: 10px;
+}
+tr.navSection td {
+	padding-left: 10px;
+	border-left: 1px solid;
+}
+tr.navSection td ul li {
+	font-style: italic;
+}
+tr.navSection a:link {
+	text-decoration: none;
+	font-style: normal;
+	border-bottom: 1px dashed #ccc;
+}
+tr.navSection a:hover, a:active {
+	color: #000;
+	text-decoration: none;
+	font-style: normal;
+	border-bottom: 1px dashed #000;
+}
+tr.navSection a:visited {
+	font-style: normal;
+	text-decoration: none;
+}
+
+/* Navigation stuff */
+/* color scheme stuff */
+/*
+	color	|	light	|	dark
+	----------------------------
+	green	|	#9c9	|	#363
+	orange	|	#f93	|	#c60
+	blue	|	#69c	|	#369
+*/
+tr#navWhoWeAre, tr#navWhoWeAre a:link, tr#navWhoWeAre a:visited {
+	color: #363;
+}
+tr#navWhoWeAre td {
+	border-color: #9c9;
+	color: #9c9;
+}
+tr#navWhoWeAre a:hover, a:active {
+	color: #000;
+}
+
+
+tr#navWhatWeDo, tr#navWhatWeDo a:link, tr#navWhatWeDo a:visited {
+	color: #c60;
+}
+tr#navWhatWeDo td {
+	color: #f93;
+	border-color: #f93;
+	font-style: italic;
+}
+tr#navWhatWeDo a:hover, a:active {
+	color: #000;
+}
+
+
+tr#navLearnMore, tr#navLearnMore a:link, tr#navLearnMore a:visited {
+	color: #369;
+}
+tr#navLearnMore td {
+	color: #69c;
+	border-color: #69c;
+}
+tr#navLearnMore a:hover, a:active {
+	color: #000;
+}
+/* end color-coded navigation crap */
+
+tr.navSection td ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+tr.navSection td ul li {
+	margin-bottom: 10px;
+}
+
+tr.navSection ul.sublist {
+	margin: 5px 0px 10px 30px;
+}
+tr.navSection ul.sublist li {
+	margin-bottom: 3px;
+	padding: 0px;
+	font-size: 11px;
+}
+
+
+
+/* Content stuff */
+h1 {
+	margin-top: 25px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: normal;
+}
+p {
+	font-size: 12px;
+	text-align: justify;
+	line-height: 175%;
+}
+p span.intro {
+	font-size: 125%;
+	font-weight: bold;
+}
+p.center {
+	text-align: center;
+}
+blockquote {
+	font-style: italic;
+	background-color: #eee;
+	border-top: 1px solid #ccc;
+	margin: 0px;
+	text-align: center;
+	padding: 5px 0px;
+}
+td#content div.likeBlockQuote {
+	background-color: #eee;
+	border-top: 1px solid #ccc;
+	margin: 0px;
+	padding: 5px 20px;
+}
+
+
+div#breadcrumbs {
+	font: 11px verdana;
+	color: #999;
+	background-color: #eee;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+div.divider {
+	margin: 25px 40px;
+}
+div.divider img {
+	height: 2px;
+	width: 100%;
+}
+
+
+h4 {
+	font-size: 16px;
+	padding-top: 40px;
+	margin: 0px;
+	border-bottom: 1px solid #ccc;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: normal;
+	margin: 0px;
+	text-align: center;
+}
+
+p.fineprint {
+	font: 10px verdana;
+}
+
+p.backToTop {
+	font: 10px verdana;
+}
+p.backToTop img {
+	border: 0px;
+}

@@ -1,0 +1,210 @@
+body {
+	background-color: #eee;
+	color: #333;
+	margin: 50px;
+	padding: 0px;
+
+	/* for damned IE */
+	text-align: center;
+}
+div#document {
+	width: 750px;
+	background-color: #fff;
+	text-align: left !important;
+	margin: auto;
+}
+
+
+div#header {
+	height: 100px;
+	margin: 0px;
+	padding: 0px;
+	background: #004489 url(core/img/uw-logo.gif) right no-repeat;
+}
+div#header h1 {
+	margin: 0px;
+	padding: 0px;
+	height: 100px;
+	width: 308px;
+	overflow: hidden;
+	background: url(core/img/logo.gif) no-repeat;
+	text-indent: -100em;
+}
+
+
+div#nav {
+	border-top: 1px solid #B02700;
+	border-right: 1px solid #B02700;
+	margin: 0px;
+	padding: 0px;
+	height: 32px;
+	background: #004489 url(core/img/nav/bg.gif) bottom repeat-x;
+}
+div#nav ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+div#nav ul li {
+	display: block;
+	float: left;
+}
+div#nav a {
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	width: 111px;
+	height: 32px;
+	text-indent: -100em;
+	overflow: hidden;
+}
+/* Normal states */
+div#nav a.who { background: url(core/img/nav/who-off.gif) no-repeat; }
+div#nav a.what { background: url(core/img/nav/what-off.gif) no-repeat; }
+div#nav a.learn { background: url(core/img/nav/learn-off.gif) no-repeat; }
+
+/* Hover states */
+div#nav a.who:hover { background: url(core/img/nav/who-on.gif) no-repeat; }
+div#nav a.what:hover { background: url(core/img/nav/what-on.gif) no-repeat; }
+div#nav a.learn:hover { background: url(core/img/nav/learn-on.gif) no-repeat; }
+
+div#nav .who-selected { background: url(core/img/nav/who-selected.gif) no-repeat; }
+div#nav .what-selected { background: url(core/img/nav/what-selected.gif) no-repeat; }
+div#nav .learn-selected { background: url(core/img/nav/learn-selected.gif) no-repeat; }
+
+div#subnav {
+	background-color: #F8B53B;
+	border-bottom: 1px solid #ED5327;
+	border-right: 1px solid #ED5327;
+	font: 11px verdana;
+	margin: 0px;
+	margin-bottom: 40px;
+	padding: 7px 20px;
+}
+div#subnav ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+div#subnav ul li {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	padding-right: 15px;
+	margin-right: 15px;
+	border-right: 1px solid #ED5327;
+}
+div#subnav a {
+	color: #CF3002;
+	text-decoration: none;
+}
+
+
+div#news {
+	width: 200px;
+	float: right;
+	margin-right: 20px;
+
+	font: 11px verdana, "trebuchet ms", sans-serif;
+	color: #666;
+	line-height: 175%;
+
+	/* Fix IE's double-margin bug: */
+	display: inline;
+}
+div#news h2 {
+	margin: 0px;
+	padding: 0px;
+	height: 19px;
+	width: 146px;
+	overflow: hidden;
+	text-indent: -100em;
+	background: url(core/img/h2/news-and-events.gif) no-repeat;
+}
+
+
+div#content {
+	margin-left: 20px;
+	margin-right: 270px;
+	font: 12px georgia, verdana, "trebuchet ms";
+	line-height: 175%;
+}
+
+div#content h1 {
+	margin: 0px;
+	padding: 0px;
+	height: 45px;
+	overflow: hidden;
+	text-indent: -100em;
+}
+div#content h1.about-us { background: url(core/img/h1/about-us.gif) top left no-repeat; }
+
+div#content h2 {
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 1px solid #ccc;
+}
+
+div#content p {
+	line-height: 175%;
+}
+div#content blockquote, div#content .emphasize {
+	margin: 0px;
+	padding: 20px 30px;
+	background-color: #f8f8f8;
+	border-left: 1px solid #ccc;
+}
+div#content blockquote p {
+	margin: 0px;
+	padding: 0px;
+	line-height: 100%;
+}
+div#content blockquote ul {
+	margin-bottom: 0px;
+}
+
+div#content p.fineprint {
+	font: 10px verdana;
+	color: #666;
+}
+
+div#content a, div#footer a {
+	color: #900;
+	text-decoration: none;
+	border-bottom: 1px solid #ccc;
+}
+div#content a:hover, div#footer a:hover {
+	background-color: #f8f8f8;
+	border-bottom-color: #333;
+}
+div#content p.backToTop {
+	font: 10px verdana;
+}
+div#content p.backToTop a {
+	padding-left: 13px;
+	background: transparent url(/core/png/up.png) no-repeat 1px 6px;
+}
+div#content .clear { clear: both; }
+
+div#content ul {
+	list-style-type: none;
+	margin: 10px 0px 10px 20px;
+	padding: 0px;
+}
+div#content ul li {
+	padding-left: 15px;
+	background: transparent url(/core/png/bullet.png) no-repeat 0px 4px;
+}
+
+
+
+div#footer {
+	background-color: #7587B7;
+	border-top: 1px solid #A3B0D4;
+	border-bottom: 1px solid #48609D;
+	border-right: 1px solid #48609D;
+	padding: 5px 20px;
+	text-align: right;
+	font: 10px verdana,"trebuchet ms",sans-serif;
+	color: #fff;
+}
