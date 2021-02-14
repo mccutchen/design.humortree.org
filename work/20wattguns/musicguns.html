@@ -1,0 +1,101 @@
+<html>
+<head>
+<meta http-equiv="keywords" content="20wattSHED, band, music, alternative, grunge">
+<meta http-equiv="description" content="20wattSHED's web presence.">
+<SCRIPT LANGUAGE="JavaScript">
+
+
+        var onExt = "on.jpg";
+        var offExt = "off.jpg";
+        var Nav2 = false;
+        Nav2 = navigator.userAgent.indexOf ("Mozilla/2") != -1 ;
+
+function changeImage(fileName, imageName, action) {
+        if (Nav2)
+{
+        // Skip the script
+}
+else
+{
+        if (action == "on") {
+                document.images[imageName].src = fileName + onExt;
+        }
+        else { // action == "off"
+                document.images[imageName].src = fileName + offExt;
+        };
+        };      
+};
+
+function preLoad() {
+        if (Nav2)
+{
+        // Skip the script
+}
+else
+{
+        onImages = new Array();
+        onImages[0] = new Image();
+        onImages[0].src = "homeon.jpg";
+        onImages[1] = new Image();
+        onImages[1].src = "homeoff.jpg";    
+        onImages[2] = new Image();
+        onImages[2].src = "bandon.jpg"; 
+        onImages[3] = new Image();
+        onImages[3].src = "bandoff.jpg";
+        onImages[4] = new Image();
+        onImages[4].src = "musicon.jpg";      
+        onImages[5] = new Image();
+        onImages[5].src = "musicoff.jpg";
+	onImages[6] = new Image();
+	onImages[6].src = "showson.jpg";
+	onImages[7] = new Image();
+	onImages[7].src = "showsoff.jpg";
+        onImages[8] = new Image();
+	onImages[8].src = "contacton.jpg";
+	onImages[9] = new Image();
+	onImages[9].src = "contactoff.jpg";
+	onImages[10] = new Image();
+	onImages[10].src = "flyawayon.jpg";
+	onImages[11] = new Image();
+	onImages[11].src = "flyawayoff.jpg";
+
+};
+};
+
+
+</SCRIPT>
+<title>20wattSHED Online</title></head>
+
+<body onLoad="preLoad()" bgcolor="black" leftmargin="0" topmargin="0" text="black" link="gray" vlink="silver" alink="red">
+
+
+
+
+
+<table border="0" height="100%" width="100%" align="center" valign="top">
+	<tr>
+		<td background="tablebg.jpg" bgproperties="fixed" width="37%" align="center" valign="top">
+			<img src="musictitle.gif" width="250" height="250">
+			<br>&nbsp;<img src="guitars.gif" width="250" height="450">
+			<br>&nbsp;<img src="shows02.gif" width="250" height="350">
+		</td>
+		
+		<td width="200" valign="top">
+			<img src="logosmall.jpg" width="200" height="94">
+			<br>&nbsp;<a href="index.html" onMouseOver="changeImage('home','4','on')" onMouseOut="changeImage('home','4','off')"><img src="homeoff.jpg" width="200" height="147" border="0"></a>
+			<br>&nbsp;<a href="bandguns.html" onMouseOver="changeImage('band','5','on')" onMouseOut="changeImage('band','5','off')"><img src="bandoff.jpg" width="200" height="147" border="0"></a>
+			<br>&nbsp;<a href="musicguns.html" onMouseOver="changeImage('music','6','on')" onMouseOut="changeImage('music','6','off')"><img src="musicoff.jpg" width="200" height="144" border="0"></a>
+			<br>&nbsp;<a href="showsguns.html" onMouseOver="changeImage('shows','7','on')" onMouseOut="changeImage('shows','7','off')"><img src="showsoff.jpg" width="200" height="147" border="0"></a>
+			<br>&nbsp;<a href="contactguns.html" onMouseOver="changeImage('contact','8','on')" onMouseOut="changeImage('contact','8','off')"><img src="contactoff.jpg" width="200" height="137" border="0"></a>
+			<br>&nbsp;<a href="flyawayguns.html" onMouseOver="changeImage('flyaway','9','on')" onMouseOut="changeImage('flyaway','9','off')"><img src="flyawayoff.jpg" width="200" height="172" border="0"></a>
+			<br>&nbsp;<a href="mailto:oatwillie@hotmail.com"><img src="copyright.gif" width="200" height="200" border="0"></a>
+		</td>
+
+		<td background="tablebg02.jpg" align="center" valign="top">
+			<img src="musictitle.gif" width="250" height="250">
+			<br>&nbsp;<img src="musictext.gif" width="200" height="750">						
+		</td>
+	</tr>
+</table>
+</body>
+</html>
