@@ -1,0 +1,10 @@
+#main-content .news-item span {
+	font-size: 11px;
+}
+div#legal-disclaimer {
+	font-size: 11px;
+	margin-top: 40px;
+	padding-top: 20px;
+	border-top: 1px solid #ccc;
+	clear: both;
+}

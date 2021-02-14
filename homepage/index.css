@@ -30,6 +30,11 @@ h1 span {
     margin-left: -30px;
     font-style: italic;
 }
+h3 span {
+    /* font-size: smaller; */
+    color: #999;
+    font-style: italic;
+}
 
 section {
     display: table-cell;
@@ -98,13 +103,13 @@ section {
     box-shadow: 0 0 4px rgba(0,0,0,.15);
 }
 .site h3 {
-    font-size:;
+    position: relative;
 }
 
 .site h3 span {
     color: #666;
-    font-family: "Lucida Grande", Verdana, sans-serif;
     font-size: 11px;
+    font-style: italic;
 }
 
 .site p {

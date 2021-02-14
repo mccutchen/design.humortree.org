@@ -1,0 +1,86 @@
+/*------------------------------------------------------------------------------
+	sitewide-advanced.css
+		Rules to be hidden from misbehaving browsers (generally, NN4 and IE4)
+		
+		Notes:
+			Path to images: ../images
+------------------------------------------------------------------------------*/
+@import 'header-backgrounds.css';
+
+
+
+/*------------------------------------------------------------------------------
+	rules to supplement sitewide-header-and-footer.css
+------------------------------------------------------------------------------*/
+div#sitewide-header {
+	margin: 0px;
+	margin-bottom: 20px;
+	
+	padding-bottom: 3px;
+	background-image: url(../../images/patterns/header-shadow.gif);
+	background-repeat: repeat-x;
+	background-position: bottom left;
+}
+td#sitewide-links form {
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+}
+td#sitewide-links input {
+	font: 11px arial;
+}
+
+#sitewide-navigation {
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	padding: 5px 10px;
+	background-image: url(../../images/backgrounds/sitewide-navigation.gif);
+}
+
+td#splash {
+	padding: 0px;
+	border-bottom: 1px solid;
+}
+
+td#site-section {
+	padding: 0px;
+}
+#site-section h1 {
+	padding: 10px;
+	float: none !important;
+}
+
+
+
+/*------------------------------------------------------------------------------
+	rules to supplement sitewide-content.css
+------------------------------------------------------------------------------*/
+div#sidebar {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+}
+
+#main-content h2 {
+	padding: 10px 0px;
+	margin: 0px 0px 20px 0px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 20px 10px;
+	padding: 0px;
+}
+li {
+	background-image: url(../../images/bhc-bullet.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 4px;
+	padding-left: 15px;
+	margin-top: 10px;
+}
+div.split2, div.split2-first {
+	margin-bottom: 20px;
+}
+div.split2-first {
+	margin-right: 6%;
+}

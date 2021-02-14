@@ -1,0 +1,102 @@
+/*
+Brookhaven colors
+-----------------
+Dark:	#008240
+Light:	#75BD2F
+*/
+
+
+/*------------------------------------------------------------------------------
+	Header and footer colors
+	See: sitewide-header-and-footer.css
+------------------------------------------------------------------------------*/
+#sitewide-links {
+	color: #ccc;
+}
+
+
+td#sitewide-links input {
+	color: #333;
+}
+td#sitewide-links input.input-text {
+	border: 1px solid #999;
+	background-color: #eee;
+}
+td#sitewide-links input.input-submit {
+	border: 1px outset #ccc;
+	background-color: #ccc;
+}
+
+#sitewide-navigation {
+	background-color: #008240;
+	color: #75BD2F;
+	border-color: #016B35 !important;
+}
+#sitewide-navigation a, #sitewide-navigation a:link {
+	color: #fff;
+}
+#sitewide-navigation a:hover {
+	color: #A0E25F;
+}
+
+#site-section {
+	background-color: #75BD2F;
+	border-color: #599F14 !important;
+}
+#site-section h1 {
+	color: #fff;
+}
+
+#splash {
+	border-color: #016B35 !important;
+}
+#splash p {
+	color: #fff;
+}
+
+#sitewide-footer {
+	border-top-color: #75BD2F;
+}
+#sitewide-footer p {
+	color: #666;
+}
+#sitewide-footer td#copyright {
+	border-left-color: #ccc;
+}
+
+
+
+/*------------------------------------------------------------------------------
+	Content colors
+	See: sitewide-content.css
+------------------------------------------------------------------------------*/
+body, table, td, div, p {
+	color: #000;
+}
+
+#main-content {
+	border-top-color: #fff;
+}
+#main-content h2 {
+	border-bottom-color: #ccc;
+	color: #c30;
+}
+div.highlight {
+	border-color: #ccc !important;
+	background-color: #eee;
+}
+div#sidebar h3 {
+	border-bottom-color:#ccc;
+	color: #333;
+}
+
+a, a:link {
+	color: #008240;
+}
+a:hover {
+	color: #75BD2F;
+}
+
+#main-content .news-item span {
+	color: #666;
+}

@@ -1,0 +1,106 @@
+/*------------------------------------------------------------------------------
+	sitewide-layout.css
+		Allows you to specify the layout of the page by giving the body a
+		special class.  Right now, the two supported classes are:
+		
+			SM
+			MS
+			
+		where SM features the sidebar (must be a div with id="sidebar") on the
+		left, the main-content (must be a div with id="main-content") on the
+		right.  MS is the opposite.
+		
+		Notes:
+			Path to images: ../images
+			Makes liberal use of the quick and dirty nested comment hack to
+			hide rules from Netscape 4:
+				width: 100px;					<-- This is what Netscape 4 sees
+				\*\*\margin-right: 34%;\*\*\	<-- This is what others see
+------------------------------------------------------------------------------*/
+
+
+/*---------------------------------------------
+	Layout: default
+	(just the main content, which is centered)
+----------------------------------------------*/
+body div#main-content {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+
+/*---------------------------------------------
+	Layout: MS
+	(sidebar right of main content, liquid)
+----------------------------------------------*/
+body.MS #sidebar {
+	float: right;
+	width: 27%;
+	padding-right: 20px;
+}
+body.MS #main-content {
+	margin: 0px;
+	/*/*/margin-right: 34%;/*/*/
+	padding-right: 5%;
+	
+	/* This is the dotted border */
+	background: transparent url(../../images/patterns/column-border.gif) top right repeat-y;
+}
+
+
+/*---------------------------------------------
+	Layout: SM
+	(sidebar left of main content)
+----------------------------------------------*/
+body.SM div#sidebar {
+	float: left;
+	width: 20%;
+	padding-left: 20px;
+}
+body.SM div#main-content {
+	margin: 0px;
+	/*/*/margin-left: 27%;/*/*/
+	padding-left: 5%;
+	
+	/* This is the dotted border */
+	background: transparent url(../../images/patterns/column-border.gif) top left repeat-y;
+}
+
+
+/*---------------------------------------------
+	Layout: MS-fixed
+	(sidebar right of main content, fixed)
+----------------------------------------------*/
+body.MS-fixed div#sidebar {
+	float: right;
+	width: 200px;
+	padding: 0 2%;
+}
+body.MS-fixed div#main-content {
+	margin-right: 240px;
+	margin-left: 0px;
+	padding-right: 40px;
+	width: auto;
+	
+	/* This is the dotted border */
+	background: transparent url(../../images/patterns/column-border.gif) top right repeat-y;
+}
+
+
+/*---------------------------------------------
+	Layout: SM-fixed
+	(sidebar left of main content)
+----------------------------------------------*/
+body.SM-fixed div#sidebar {
+	float: left;
+	width: 200px;
+	padding: 0 2%;
+}
+body.SM-fixed div#main-content {
+	margin-left: 240px;
+	margin-right: 0px;
+	padding-left: 40px;
+	
+	/* This is the dotted border */
+	background: transparent url(../../images/patterns/column-border.gif) top left repeat-y;
+}
