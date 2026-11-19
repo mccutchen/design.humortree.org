@@ -1,0 +1,59 @@
+BODY
+{
+	scrollbar-face-color: #996633;
+	scrollbar-arrow-color: #cccccc;
+	scrollbar-highlight-color: #663300;
+	scrollbar-shadow-color: #663300;
+	scrollbar-track-color: #663300;
+}
+.text
+{
+	font-family: verdana, arial;
+	font-size: 10px;
+	color: #cccccc;
+	align: left;
+}
+A:link,A:visited
+{
+	color: #cccccc;
+	text-decoration: underline;
+}
+A:hover, A:active
+{
+	color: #cccccc;
+	background-color: 663300;
+	text-decoration: none;
+}
+.darkborder
+{
+	border: 1px dashed;
+	color: #663300;
+	padding: 5px;
+}
+.lightborder
+{
+	border: 1px dashed;
+	color: #cccccc;
+	padding: 10px;
+}
+/*
+     FILE ARCHIVED ON 23:24:01 Nov 03, 2001 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:19:36 Apr 30, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 330.141
+  exclusion.robots: 0.136
+  exclusion.robots.policy: 0.125
+  RedisCDXSource: 22.516
+  esindex: 0.012
+  LoadShardBlock: 284.451 (3)
+  PetaboxLoader3.datanode: 266.185 (4)
+  CDXLines.iter: 20.591 (3)
+  load_resource: 165.508
+  PetaboxLoader3.resolve: 78.442
+*/
